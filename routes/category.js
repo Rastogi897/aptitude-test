@@ -74,7 +74,7 @@ const certQuestionsPaginationRender =
             category,
             cert,
             page,
-            limit: 5,
+            limit: 10,
             force,
         });
 
@@ -91,8 +91,8 @@ const certQuestionsPaginationRender =
             questions,
             total,
             page,
-            from: page * 5 - 4,
-            to: page * 5,
+            from: (page - 1) * 10 + 1,
+            to: ((page * 10) <= total ? (page * 10) : total),
             allPages: Math.ceil(total / limit),
             limit,
             title: `${certData.title} Questions: Page ${page}`,
