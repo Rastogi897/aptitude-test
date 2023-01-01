@@ -1,0 +1,117 @@
+
+		{{#each questions}}
+			<div class="iquestion iquestion{{@index}}">
+				<div class="bg-green-300 bg-red-300"></div>
+				<h3 class="text-xl font-bold mb-2">{{name}}</h3>
+				{{#each question}}
+					{{#startsWith "https://" this}}
+						<img src="{{this}}" />
+					{{else}}
+						<p>{{this}}</p>
+					{{/startsWith}}
+				{{/each}}
+
+				<fieldset>
+					{{#equalsLength correctAnswer 1}}
+						<div class="mt-4"><legend class="text-md font-bold mt-4 text-gray-900">Options:</legend></div>
+						{{#each options}}
+						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
+							<div class="relative flex items-start py-4">
+								<div class="ml-3 mr-3 flex h-5 items-center">
+									<input id="{{@../index}}-{{@index}}" name="{{@../index}}" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+								</div>
+								<div class="min-w-0 flex-1 text-sm">
+									<label for="{{@../index}}-{{@index}}" class="select-none font-medium text-gray-700">
+									{{#eq @index 0}}A: {{/eq}}
+									{{#eq @index 1}}B: {{/eq}}
+									{{#eq @index 2}}C: {{/eq}}
+									{{#eq @index 3}}D: {{/eq}}
+									{{#eq @index 4}}E: {{/eq}}
+									{{this}}</label>
+								</div>
+							</div>
+						</div>
+						{{/each}}
+					{{else}}
+						<div class="mt-4"><legend class="text-md font-bold mt-4 text-gray-900">Options (Choose {{length correctAnswer}}):</legend></div>
+						{{#each options}}
+						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
+							<div class="relative flex items-start py-4">
+								<div class="ml-3 mr-3 flex h-5 items-center">
+									<input id="{{@../index}}-{{@index}}" name="{{@../index}}-{{@index}}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
+								</div>
+								<div class="min-w-0 flex-1 text-sm">
+									<label for="{{@../index}}-{{@index}}" class="select-none font-medium text-gray-700">
+									{{#eq @index 0}}A: {{/eq}}
+									{{#eq @index 1}}B: {{/eq}}
+									{{#eq @index 2}}C: {{/eq}}
+									{{#eq @index 3}}D: {{/eq}}
+									{{#eq @index 4}}E: {{/eq}}
+									{{this}}
+									</label>
+								</div>
+							</div>
+						</div>
+						{{/each}}
+					{{/equalsLength}}
+				</fieldset>
+				<br/>
+				<div>
+					<button data-iquestionindex="{{@key}}" type="button" class="iquestion-eval inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+					<button data-iquestionindex="{{@key}}" type="button" class="iquestion-eval inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Reveal Solution</button>
+					{{!-- <a href="" class="inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">View Discussion</a> --}}
+				</div>
+				<div class="iquestion-ans hidden">{{#each correctAnswer}}{{this}}:{{/each}}</div>
+				<div class="mt-6 hidden iquestion-answer">
+					Correct Answer: {{#each correctAnswer}}
+						{{#gt @index 0}},{{/gt}}
+						{{#eq this '1'}}A{{/eq}}
+						{{#eq this '2'}}B{{/eq}}
+						{{#eq this '3'}}C{{/eq}}
+						{{#eq this '4'}}D{{/eq}}
+						{{#eq this '5'}}E{{/eq}}
+					{{/each}}
+					{{#if explanation}}
+					Explanation: {{explanation}}
+					{{/if}}
+				</div>
+
+			</div>
+		{{/each}}
+
+
+		<script>
+				// jquery dom ready
+				$(document).ready(function() {
+					$(".iquestion-eval").click(function(){
+						console.log("ss");
+						// get data attribute iquestionindex of clicked element
+						var iquestionindex = $(this).data("iquestionindex");
+						var parent = $(".iquestion" + iquestionindex);
+						parent.find(".iquestion-answer").show();
+
+						// get answer
+						var ans = parent.find(".iquestion-ans").text().split(":").filter(function(x){
+							return x != "";
+						});
+
+						var anss = {};
+						ans.map(function(x){
+							anss[x] = true;
+						});
+
+
+						parent.find(".iquestion-option").map(function(){
+							var index = $(this).data("optionindex");
+							$(this).addClass(anss["" + (index + 1)] ? "iquestion-correct bg-green-300": "");
+
+							// if user selected this but if it is not anss, then mark it as wrong
+							if($(this).find("input").is(":checked") && !anss["" + (index + 1)]){
+								$(this).addClass("iquestion-wrong bg-red-300");
+							}
+						});
+						
+						console.log(ans);
+					})
+				})
+		</script>

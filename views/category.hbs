@@ -1,0 +1,305 @@
+{{#content "metaNew"}}
+{{> faqs-html-schema-embed}}
+{{/content}}
+
+{{#content "body"}}
+
+<div class="mx-auto mt-16 max-w-7xl px-4 sm:mt-24 sm:px-6">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block text-indigo-600">{{catData.title}}</span>
+          </h1>
+          <p class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+            {{catData.description}}
+          </p>
+        </div>
+      </div>
+
+<div class="mx-auto max-w-5xl">
+<!-- Projects list (only on smallest breakpoint) -->
+      <div class="mt-10 sm:hidden">
+        <div class="px-4 sm:px-6">
+          <h2 class="text-sm font-medium text-gray-900">Certifications</h2>
+        </div>
+        <ul role="list" class="mt-3 divide-y divide-gray-100 border-t border-gray-200">
+          {{#each catData.list}}
+          <li>
+            <a href="/exam/{{../catData.commentsSlug}}/{{slug}}" class="group flex items-center justify-between px-4 py-4 hover:bg-gray-50 sm:px-6">
+              <span class="flex items-center space-x-3 truncate">
+                <span class="w-2.5 h-2.5 flex-shrink-0 rounded-full bg-pink-600" aria-hidden="true"></span>
+                <span class="truncate text-sm font-medium leading-6">
+                  {{title}}
+                </span>
+              </span>
+              <!-- Heroicon name: mini/chevron-right -->
+              <svg class="ml-4 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+          {{/each}}
+
+        </ul>
+      </div>
+
+
+	  <!-- Projects table (small breakpoint and up) -->
+      <div class="mt-8 hidden sm:block">
+        <div class="inline-block min-w-full border-b border-gray-200 align-middle">
+          <table class="min-w-full">
+            <thead>
+              <tr class="border-t border-gray-200">
+                <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900" scope="col">
+                  <span class="lg:pl-2">Exam</span>
+                </th>
+                {{!-- <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900" scope="col">Members</th> --}}
+                {{!-- <th class="hidden border-b border-gray-200 bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900 md:table-cell" scope="col">Last updated</th> --}}
+                <th class="border-b border-gray-200 bg-gray-50 py-3 pr-6 text-right text-sm font-semibold text-gray-900" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 bg-white">
+              {{#each catData.list}}
+              <tr>
+                <td class="w-full max-w-0 whitespace-nowrap px-6 py-3 text-sm font-medium text-gray-900">
+                  <div class="flex items-center space-x-3 lg:pl-2">
+                    <div class="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-pink-600" aria-hidden="true"></div>
+                    <a href="/exam/{{../catData.commentsSlug}}/{{slug}}" class="truncate hover:text-gray-600">
+                      <span>
+                        {{title}}
+                      </span>
+                    </a>
+                  </div>
+                </td>
+                {{!-- <td class="px-6 py-3 text-sm font-medium text-gray-500">
+                  <div class="flex items-center space-x-2">
+                    <div class="flex flex-shrink-0 -space-x-1">
+                      <img class="h-6 w-6 max-w-none rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Dries Vincent">
+
+                      <img class="h-6 w-6 max-w-none rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Lindsay Walton">
+
+                      <img class="h-6 w-6 max-w-none rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Courtney Henry">
+
+                      <img class="h-6 w-6 max-w-none rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Tom Cook">
+                    </div>
+
+                    <span class="flex-shrink-0 text-xs font-medium leading-5">+8</span>
+                  </div>
+                </td> --}}
+                {{!-- <td class="hidden whitespace-nowrap px-6 py-3 text-right text-sm text-gray-500 md:table-cell">March 17, 2020</td> --}}
+                <td class="whitespace-nowrap px-6 py-3 text-right text-sm font-medium">
+                  <a href="/exam/{{../catData.commentsSlug}}/{{slug}}" class="text-indigo-600 hover:text-indigo-900">View</a>
+                </td>
+              </tr>
+              {{/each}}
+
+              <!-- More projects... -->
+            </tbody>
+          </table>
+        </div>
+	</div>
+</div>
+
+<div class="overflow-hidden bg-white">
+  <div class="relative mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8 lg:py-40">
+    <svg class="absolute top-0 left-full -translate-x-1/2 -translate-y-3/4 transform lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+      <defs>
+        <pattern id="8b1b5f72-e944-4457-af67-0c6d15a99f38" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="4" height="4" class="text-gray-100" fill="currentColor" />
+        </pattern>
+      </defs>
+      <rect width="404" height="784" fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)" />
+    </svg>
+
+    <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-12 xl:gap-x-16">
+      <div class="lg:col-span-1">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">Be ready for certification exam day with free certification exam dumps</h2>
+      </div>
+      <dl class="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-2 lg:mt-0">
+        {{#each catData.features}}
+        <div>
+          <dt>
+            <p class="mt-6 text-lg font-semibold leading-8 text-gray-900">{{f}}</p>
+          </dt>
+          <dd class="mt-2 text-base text-gray-600">{{d}}</dd>
+        </div>
+        {{/each}}
+
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/typography'),
+    ],
+  }
+  ```
+-->
+<div class="overflow-hidden bg-gray-50 py-16">
+  <div class="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-prose text-base lg:max-w-none">
+      <h2 class="text-lg font-semibold text-indigo-600">Case study</h2>
+      <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">Why use {{title}}?</p>
+    </div>
+    <div class="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
+      <p class="text-lg text-gray-500">We recently implemented Free Certification Dumps to provide training to our new hires. We are really impressed with their level of service and their content. The topics covered are very comprehensive, and the quality and clarity of the content is of a very high standard. The files include exam questions that have been tested and verified for accuracy, allowing us to trust the results.</p>
+      <p class="text-lg text-gray-500">he customer service and technical support teams are very prompt in helping us resolve any issues we encounter. We are also very pleased with the cost of the exams, as they are very affordable. </p>
+    </div>
+    <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
+      <div class="relative z-10">
+        <div class="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
+        </div>
+        {{!-- <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
+          <div class="rounded-md shadow">
+            <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Contact sales</a>
+          </div>
+          <div class="ml-4 rounded-md shadow">
+            <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Learn more</a>
+          </div>
+        </div> --}}
+      </div>
+      <div class="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none">
+        <svg class="absolute top-0 right-0 -mt-20 -mr-20 lg:top-auto lg:right-auto lg:bottom-1/2 lg:left-1/2 lg:mt-0 lg:mr-0 xl:top-0 xl:right-0 xl:-mt-20 xl:-mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+          <defs>
+            <pattern id="bedc54bc-7371-44a2-a2bc-dc68d819ae60" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="384" fill="url(#bedc54bc-7371-44a2-a2bc-dc68d819ae60)" />
+        </svg>
+        <blockquote class="relative rounded-lg bg-white shadow-lg">
+          <div class="rounded-t-lg px-6 py-8 sm:px-10 sm:pt-10 sm:pb-8">
+            {{!-- <img src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg" alt="Workcation" class="h-8"> --}}
+            <div class="relative mt-8 text-lg font-medium text-gray-700">
+              <svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              <p class="relative">Overall, using Free Certification Dumps to supplement our induction training has been a positive experience. Our new recruits find the material very useful and comprehensive, and we are happy with the results.</p>
+            </div>
+          </div>
+          <cite class="relative flex items-center rounded-b-lg bg-indigo-600 py-5 px-6 not-italic sm:mt-10 sm:items-start sm:py-5 sm:pl-12 sm:pr-10">
+            <span class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:-translate-y-1/2 sm:transform">
+              <img class="h-12 w-12 rounded-full bg-indigo-300 sm:h-20 sm:w-20" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2.5&w=160&h=160&q=80" alt="">
+            </span>
+            <span class="relative ml-4 font-semibold leading-6 text-indigo-300 sm:ml-24 sm:pl-1">
+              <span class="font-semibold text-white sm:inline">Nicky Brown</span>
+              <span class="sm:inline">Talent Acquisition and Training Head at Spren Archive Inc</span>
+            </span>
+          </cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bg-gray-50">
+  <div class="mx-auto max-w-7xl divide-y divide-gray-200 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Frequently asked questions</h2>
+    <div class="mt-8">
+      <dl class="divide-y divide-gray-200">
+        <div class="pt-6 pb-8 md:grid md:grid-cols-12 md:gap-8">
+          {{#each faqsData}}
+          <dt class="text-base font-medium text-gray-900 md:col-span-5">{{q}}</dt>
+          <dd class="mt-2 md:col-span-7 md:mt-0">
+            <p class="text-base text-gray-500">{{a}}</p>
+          </dd>
+          {{/each}}
+        </div>
+
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="bg-white">
+  <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Used by the world's top growing companies</h2>
+        <p class="mt-3 max-w-3xl text-lg text-gray-500">Certification dumps offer a quick and easy way for people to learn new skills, prove their competency, and gain recognition in their field. Certification dumps are popular among companies because they provide a low-cost, high-value way to invest in employee development. Companies are using certification dumps to assess their employees' current skills and identify areas for improvement. This allows them to hone in on needed training and ensure they're investing in the right kind of professional development. </p>
+        {{!-- <div class="mt-8 sm:flex">
+          <div class="rounded-md shadow">
+            <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Create Account</a>
+          </div>
+          <div class="mt-3 sm:mt-0 sm:ml-3">
+            <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-100 px-5 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200">Contact Us</a>
+          </div>
+        </div> --}}
+      </div>
+      <div class="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
+        <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="/images/startup1.png">
+        </div>
+        <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="/images/startup2.png">
+        </div>
+        <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="/images/startup3.png">
+        </div>
+        <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="/images/startup4.png">
+        </div>
+        {{!-- <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+        </div>
+        <div class="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+          <img class="max-h-12" src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg" alt="Statamic">
+        </div> --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="overflow-hidden bg-gray-50 py-12 md:py-20 lg:py-24">
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <svg class="absolute top-full right-full translate-x-1/3 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+      <defs>
+        <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+        </pattern>
+      </defs>
+      <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+    </svg>
+
+    <div class="relative">
+      {{!-- <img class="mx-auto h-8" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg" alt="Workcation"> --}}
+      <blockquote class="mt-10">
+        <div class="mx-auto max-w-3xl text-center text-2xl font-medium leading-9 text-gray-900">
+          <p>&ldquo;At our company, we have seen a tremendous benefit from certifying our employees with free certification dumps. This program has allowed us to stay up to date with the latest industry best practices and has provided our team members with the tools and resources they need to stay competitive in the workforce. Through the use of these free certification dumps, we have seen a significant increase in employee productivity and morale, allowing us to better serve our customers and deliver quality work. We would highly recommend free certification dumps to any business looking to invest in their employees.&rdquo;</p>
+        </div>
+        <footer class="mt-8">
+          <div class="md:flex md:items-center md:justify-center">
+            <div class="md:flex-shrink-0">
+              <img class="mx-auto h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
+            </div>
+            <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+              <div class="text-base font-medium text-gray-900">Archer Miller</div>
+
+              <svg class="mx-1 hidden h-5 w-5 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M11 0h3L9 20H6l5-20z" />
+              </svg>
+
+              <div class="text-base font-medium text-gray-500">CEO, Josepine Labs</div>
+            </div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+{{/content}}

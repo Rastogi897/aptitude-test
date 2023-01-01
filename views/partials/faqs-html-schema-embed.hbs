@@ -1,0 +1,18 @@
+{{#gt faqsData.length 0}}
+<script type="application/ld+json">
+{   
+    "@context": "http://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {{#each faqsData}}{{#gt @index 0}},{{/gt}}{
+        "@type": "Question",
+        "name": "{{this.q}}",
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{{this.a}}}"
+        }
+    }{{/each}}]
+}
+</script>
+{{else}}
+{{/gt}}

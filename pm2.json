@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "aptitudetests",
+            "script": "npm",
+            "args": ["run", "start"]
+        }
+    ]
+}
