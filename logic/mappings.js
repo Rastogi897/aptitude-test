@@ -2,11 +2,11 @@ const fetch = require("node-fetch");
 
 var categories = {
   verbal: {
-    title: "Free Amazon Certification Exam Dumps",
+    title: "Verbal Reasoning Test",
     logo: "aws.png",
     description:
       "Practice for Amazon certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual amazon tests.",
-    commentsSlug: "amazon",
+    commentsSlug: "verbal",
     list: [
       {
         slug: "vr-test",
@@ -71,11 +71,11 @@ var categories = {
     ],
   },
   spatial: {
-    title: "Free Microsoft certification dumps",
+    title: "Spatial Reasoning Test",
     logo: "azure.png",
     description:
       "Practice for Microsoft Azure certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Azure tests.",
-    commentsSlug: "microsoft",
+    commentsSlug: "spatial",
     list: [
       {
         slug: "sr-test",
@@ -136,11 +136,11 @@ var categories = {
     ],
   },
   logical: {
-    title: "Free Tableau certification dumps",
+    title: "Logical Reasoning Test",
     logo: "tableau.png",
     description:
       "Practice for Tableau certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Tableau tests.",
-    commentsSlug: "tableau",
+    commentsSlug: "logical",
     list: [
       {
         slug: "lr-test",
@@ -201,11 +201,11 @@ var categories = {
     ],
   },
   abstract: {
-    title: "Free Splunk certification dumps",
+    title: "Abstract Reasoning Test",
     logo: "splunk.png",
     description:
       "Practice for Splunk certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Splunk tests.",
-    commentsSlug: "splunk",
+    commentsSlug: "abstract",
     list: [
       {
         slug: "ar-test",
@@ -266,11 +266,11 @@ var categories = {
     ],
   },
   numerical: {
-    title: "Free Splunk certification dumps",
+    title: "Numerical Reasoning Test",
     logo: "splunk.png",
     description:
       "Practice for Splunk certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Splunk tests.",
-    commentsSlug: "splunk",
+    commentsSlug: "numerical",
     list: [
       {
         slug: "nr-test",
