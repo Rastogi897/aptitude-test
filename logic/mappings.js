@@ -5,7 +5,7 @@ var categories = {
     title: "Verbal Reasoning Test",
     logo: "aws.png",
     description:
-      "Practice for Amazon certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual amazon tests.",
+      "Verbal reasoning test assess a candidate's ability to understand and analyze written information, critical thinking and problem-solving skills.",
     commentsSlug: "verbal",
     list: [
       {
@@ -74,7 +74,7 @@ var categories = {
     title: "Spatial Reasoning Test",
     logo: "azure.png",
     description:
-      "Practice for Microsoft Azure certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Azure tests.",
+      "Spatial reasoning test assess a candidate's ability to understand and manipulate 2D and 3D shapes and figures, and ability to visualize.",
     commentsSlug: "spatial",
     list: [
       {
@@ -139,7 +139,7 @@ var categories = {
     title: "Logical Reasoning Test",
     logo: "tableau.png",
     description:
-      "Practice for Tableau certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Tableau tests.",
+      "Logical reasoning test assess a candidate's ability to think critically and solve problems by analyzing information and arguments.",
     commentsSlug: "logical",
     list: [
       {
@@ -204,7 +204,7 @@ var categories = {
     title: "Abstract Reasoning Test",
     logo: "splunk.png",
     description:
-      "Practice for Splunk certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Splunk tests.",
+      "Abstract reasoning test assess a candidate's ability to think abstractly and to identify patterns and relationships between concepts.",
     commentsSlug: "abstract",
     list: [
       {
@@ -269,7 +269,7 @@ var categories = {
     title: "Numerical Reasoning Test",
     logo: "splunk.png",
     description:
-      "Practice for Splunk certification exams with this 100% Free Amazon certification dumps. It contains free real exam questions from the actual Splunk tests.",
+      "Numerical reasoning test assess a candidate's ability to work with numbers and perform basic mathematical operation.",
     commentsSlug: "numerical",
     list: [
       {
