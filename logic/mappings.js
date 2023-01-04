@@ -3,10 +3,11 @@ const fetch = require("node-fetch");
 var categories = {
   verbal: {
     title: "Verbal Reasoning Test",
-    logo: "aws.png",
+    logo: "Verbal",
     description:
-      "Verbal reasoning test assess a candidate's ability to understand and analyze written information, critical thinking and problem-solving skills.",
+      "Verbal reasoning test assess a candidate's ability to analyze written information, critical thinking and problem-solving skills.",
     commentsSlug: "verbal",
+    sublink: "vr-test",
     list: [
       {
         slug: "vr-test",
@@ -72,10 +73,11 @@ var categories = {
   },
   spatial: {
     title: "Spatial Reasoning Test",
-    logo: "azure.png",
+    logo: "Spatial",
     description:
-      "Spatial reasoning test assess a candidate's ability to understand and manipulate 2D and 3D shapes and figures, and ability to visualize.",
+      "Spatial reasoning test assess a candidate's ability to manipulate 2D and 3D shapes and figures, and ability to visualize.",
     commentsSlug: "spatial",
+    sublink: "sr-test",
     list: [
       {
         slug: "sr-test",
@@ -137,10 +139,11 @@ var categories = {
   },
   logical: {
     title: "Logical Reasoning Test",
-    logo: "tableau.png",
+    logo: "Logical",
     description:
       "Logical reasoning test assess a candidate's ability to think critically and solve problems by analyzing information and arguments.",
     commentsSlug: "logical",
+    sublink: "lr-test",
     list: [
       {
         slug: "lr-test",
@@ -202,10 +205,11 @@ var categories = {
   },
   abstract: {
     title: "Abstract Reasoning Test",
-    logo: "splunk.png",
+    logo: "Abstract",
     description:
-      "Abstract reasoning test assess a candidate's ability to think abstractly and to identify patterns and relationships between concepts.",
+      "Abstract reasoning test assess a candidate's ability to think and identify patterns and relationships between concepts.",
     commentsSlug: "abstract",
+    sublink: "ar-test",
     list: [
       {
         slug: "ar-test",
@@ -267,10 +271,11 @@ var categories = {
   },
   numerical: {
     title: "Numerical Reasoning Test",
-    logo: "splunk.png",
+    logo: "Numerical",
     description:
       "Numerical reasoning test assess a candidate's ability to work with numbers and perform basic mathematical operation.",
     commentsSlug: "numerical",
+    sublink: "nr-test",
     list: [
       {
         slug: "nr-test",
