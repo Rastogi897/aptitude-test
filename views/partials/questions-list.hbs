@@ -27,7 +27,14 @@
 									{{#eq @index 2}}C: {{/eq}}
 									{{#eq @index 3}}D: {{/eq}}
 									{{#eq @index 4}}E: {{/eq}}
-									{{this}}</label>
+									{{#startsWith "https://" this}}
+										<img class="inline-block ml-2" src="{{this}}" />
+									{{else}}
+										{{this}}
+									{{/startsWith}}
+
+									{{!-- {{this}} --}}
+									</label>
 								</div>
 							</div>
 						</div>
@@ -35,6 +42,7 @@
 					{{else}}
 						<div class="mt-4"><legend class="text-md font-bold mt-4 text-gray-900">Options (Choose {{length correctAnswer}}):</legend></div>
 						{{#each options}}
+						
 						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
 							<div class="relative flex items-start py-4">
 								<div class="ml-3 mr-3 flex h-5 items-center">
@@ -47,7 +55,12 @@
 									{{#eq @index 2}}C: {{/eq}}
 									{{#eq @index 3}}D: {{/eq}}
 									{{#eq @index 4}}E: {{/eq}}
-									{{this}}
+									{{#startsWith "https://" this}}
+										<img src="{{this}}" />
+									{{else}}
+										{{this}}
+									{{/startsWith}}
+									{{!-- {{this}} --}}
 									</label>
 								</div>
 							</div>
@@ -72,7 +85,7 @@
 						{{#eq this '5'}}E{{/eq}}
 					{{/each}}
 					{{#if explanation}}
-					Explanation: {{explanation}}
+					<br/>Explanation: {{explanation}}
 					{{/if}}
 				</div>
 
