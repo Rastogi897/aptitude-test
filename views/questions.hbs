@@ -5,9 +5,9 @@
 		{{> questions-list}}
 	</div>
 
-<nav class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6 mt-20" aria-label="Pagination">
+<nav class="flex items-center justify-between border-t border-gray-400 bg-gray-200 px-4 py-3 sm:px-6 mt-20" aria-label="Pagination">
   <div class="hidden sm:block">
-    <p class="text-sm text-gray-700">
+    <p class="text-sm text-gray-700 font-bold">
       Showing
       <span class="font-medium">{{from}}</span>
       to
@@ -18,8 +18,8 @@
     </p>
   </div>
   <div class="flex flex-1 justify-between sm:justify-end">
-    {{#if prevUrl}}<a href="{{prevUrl}}" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>{{/if}}
-    {{#if nextUrl}}<a href="{{nextUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>{{/if}}
+    {{#if prevUrl}}<a href="{{prevUrl}}" class="relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Previous</a>{{/if}}
+    {{#if nextUrl}}<a href="{{nextUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Next</a>{{/if}}
   </div>
 </nav>
 
