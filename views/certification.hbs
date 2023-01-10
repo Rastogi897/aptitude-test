@@ -1,15 +1,15 @@
 {{#content "body"}}
 
 
-  <div class="w-full px-6 lg:h-screen  pt-16 bg-gradient-to-r from-back-dark via-back-semi to-back-light text-gray-200 pb-16 sm:pb-32">
+<div class="w-full px-6 lg:h-[92vh]  pt-16 bg-gradient-to-r from-back-dark via-back-semi to-back-light text-gray-200 pb-16 sm:pb-32">
   <div class="relative items-center -mx-6 mt-2 xl:flex">
-    <div class="max-w-2xl px-6 mx-auto text-left md:text-center">
+    <div class="max-w-2xl px-6 mx-auto text-center">
       <h1 class="text-3xl leading-none sm:text-4xl md:text-5xl font-bold">{{catData.title}}</h1>
       
 
       <p class="mt-4 text-gray-300 leading-normal sm:text-lg md:text-xl text-primary-offset">{{catData.description}}</p>
       
-      <div class="flex space-x-4 md:justify-center">
+      <div class="flex space-x-4 justify-center">
         <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="focus:outline-none inline-flex items-center justify-center font-medium leading-tight shadow-md duration-200 rounded bg-primary-700 text-button px-6 py-3 text-md mt-8 text-primary text-gray-100 hover:bg-primary-900">
           <span>View Questions</span>
         </a>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="relative hidden w-full max-w-screen-xl px-6 pt-8 mx-auto md:block" style="top:80px;">
-  <div class="bg-gradient-to-t from-gray-300 to-gray-50 rounded-lg shadow">
+  <div class="bg-gradient-to-t from-gray-300 to-gray-100 rounded-lg shadow">
     <section class="text-center mx-auto">
       <h2 class="text-gray-900 tracking-wider uppercase font-bold mb-8 pt-8">Access over 300+ actual asked questions 
       </h2>
@@ -32,61 +32,57 @@
           
           <div class="w-full sm:w-32 h-32 flex flex-col justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 719.713 87.336"><path d="M495.793 87.336L547.129 0h172.008v14.4H590.111l-12.744 22.032h68.113l-8.209 14.4H568.8l-13.105 22.032h68.473L615.6 87.336H495.793zM372.312 64.584h51.623c-1.727 2.52-2.52 5.04-1.439 6.624 1.871 2.808 8.496 1.439 10.225.864 3.455-1.08 5.328-3.24 6.982-6.12l8.641-15.12h-52.631c-11.018 0-11.377-6.552-6.912-14.4L405 8.928C409.824 1.008 416.305 0 424.584 0h91.512c9.289 0 9.289 7.56 5.545 14.4l-5.184 9.288h-51.912c1.584-3.024 1.654-5.688.432-7.344-2.016-2.736-7.344-2.16-10.152-.72-2.232 1.224-4.104 3.312-6.121 6.696l-8.279 14.112h50.904c10.729 0 12.385 7.849 9 14.4l-15.48 25.848c-4.176 6.84-11.375 10.656-19.656 10.656H374.33c-8.928 0-12.023-5.904-8.209-12.384l6.191-10.368zM263.592 14.4C271.872 0 285.624 0 296.28 0h77.761c8.207 0 15.119 6.84 10.654 14.4l-34.343 58.464c-7.272 11.664-13.104 14.472-22.392 14.472h-90.504c-8.928 0-13.032-6.552-8.208-14.472L263.592 14.4zm45.144 7.92l-26.208 43.632c-.864 1.584-1.224 3.023-.72 4.176 1.656 3.6 11.808 2.952 15.336 2.232 5.04-1.152 6.336-4.752 7.416-6.408l25.848-43.632c1.8-3.096 1.584-5.112 0-6.336-2.304-1.8-9.36-1.944-13.248-.864-3.312.936-6.048 3.024-8.424 7.2zM138.024 0h99.792c7.92 0 14.112 7.2 8.928 15.84l-10.296 17.496C231.984 41.256 224.424 45 218.88 45c5.544 3.096 5.544 8.567 2.736 13.392L211.32 76.319c-2.736 4.824-6.912 11.017-19.584 11.017H0V72.864h95.04L138.024 0zm29.952 36.432h25.416c5.904 0 8.28-3.096 9.648-5.832l5.184-8.28c2.088-3.744 2.088-7.92-2.376-7.92h-24.84l-13.032 22.032zm-21.672 36.432h25.416c5.904 0 8.28-3.097 9.647-5.832l5.185-8.28c2.088-3.816 2.088-7.92-2.448-7.92h-24.768l-13.032 22.032zm566.135-40.968c-3.959 0-7.344-3.096-7.344-7.272s3.385-7.2 7.344-7.2c3.961 0 7.273 3.024 7.273 7.2.001 4.176-3.312 7.272-7.273 7.272zm-5.904-7.272c0 3.456 2.594 6.048 5.904 6.048 3.24 0 5.832-2.592 5.832-6.048s-2.592-6.048-5.832-6.048c-3.31 0-5.904 2.592-5.904 6.048zm4.393.576v3.6h-1.295v-8.352h3.168c2.016 0 2.951.72 2.951 2.376 0 1.512-.936 2.16-2.16 2.304l2.377 3.672h-1.441l-2.16-3.6h-1.44zm0-1.08h1.512c1.08 0 2.018-.072 2.018-1.368 0-1.008-.938-1.224-1.801-1.224h-1.729v2.592z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div><div class="w-full sm:w-32 h-32 flex flex-col justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="4.364 4.651 331.271 46.466"><path d="M47.741 4.761v26.537c0 9.081-4.381 14.448-17.538 14.448-13.195 0-17.599-5.367-17.599-14.448V12.644c-.169-4.422-3.794-7.975-8.24-7.975V9.82c1.611 0 2.893 1.252 3.045 2.824v20.468c0 10.521 8.252 17.997 22.793 17.997 14.519 0 22.738-7.478 22.738-17.997V4.761h-5.199zM198.803 44.995V32.562c0-1.707 1.451-3.109 3.133-3.143h22.654V24.18h-22.732a8.233 8.233 0 0 0-3.055.658V9.864h36.973V4.651h-42.225v45.556h43.762v-5.212h-38.51zM292.529 27.469c-1.1 0-2.139.225-3.1.616l-.045-18.518 28.545-.011a8.944 8.944 0 0 1 8.961 8.955c0 4.955-4.006 8.974-8.961 8.974l-25.4-.016zm39.916 17.843c-1.254 1.006-3.039.804-4.127-.352l-9.965-12.652c7.441-.229 13.397-6.327 13.397-13.809 0-7.658-6.203-13.849-13.851-13.849H284.17v45.557h5.211l.051-14.843c.057-1.654 1.455-3.032 3.147-3.032l19.185.005 12.463 15.827c2.869 3.39 7.906 3.955 11.406 1.204l-3.188-4.056zM133.661 45.312l-28.76-.025V32.365c.021-1.725 1.453-3.192 3.165-3.192l25.596-.006c4.46 0 8.059 3.61 8.059 8.048-.001 4.488-3.6 8.097-8.06 8.097m-28.76-35.745l28.892.033c4.048 0 7.323 3.285 7.323 7.34 0 4.032-3.274 7.312-7.323 7.312h-26.161a8.374 8.374 0 0 0-2.731.647V9.567zm36.27 17.1c2.934-2.234 4.856-5.756 4.856-9.749 0-6.752-5.483-12.251-12.251-12.251l-34.083-.016v45.556h33.968c7.164 0 12.964-5.812 12.964-12.992 0-4.351-2.159-8.192-5.454-10.548" fill="#10111c"></path></svg>
           </div>
-        </div>
+        </div> 
       </section>
+    </div> 
+  </div>  
+  
+</div>
+
+{{!-- 1st section --}}
+
+
+<div id="what-is" class="relative w-full max-w-screen-xl px-6 py-10 mx-auto text-lg sm:py-24">
+  <div class="grid gap-10 md:grid-cols-3">
+    <div class="flex flex-col col-span-2 justfify-center">
+      <ul class="pb-4 text-xl markdown">
+        <li>
+          <div class="markdown">
+            <h2 class="text-md md:text-3xl font-bold pb-8">What is <strong class="text-primary-900 font-bold">{{catData.title}}</strong> and what does it measure?</h2>
+            <p class="text-base md:text-lg leading-relaxed text-black">
+              {{certData.metadata.info1}}
+            </p><br>
+            <p class="text-base md:text-lg leading-relaxed text-black">
+              {{certData.metadata.info2}}
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-span-2 space-y-8 md:col-span-1 md:mt-6">
+      <div class="p-6 text-base bg-gradient-to-r from-back-dark via-back-semi to-back-light rounded-lg shadow">
+        <h4 class="mb-4 text-lg font-medium text-primary-400">Jump to a section on this page:</h4>
+        <ol class="space-y-3 list-none list-inside">
+          <li class="text-gray-300 hover:text-gray-200">
+            <a href="#what-is" class="duration-150 ease-out hover:text-secondary">What is an {{catData.title}} and what does it measure?</a>
+          </li>
+          <li class="text-gray-300 hover:text-gray-200">
+            <a href="#why-should" class="duration-150 ease-out hover:text-secondary">Why should our free {{catData.title}}?</a>
+          </li>
+          <li class="text-gray-300 hover:text-gray-200">
+            <a href="#the-format" class="duration-150 ease-out hover:text-secondary">The format of our {{catData.title}}</a>
+          </li>
+          <li class="text-gray-300 hover:text-gray-200">
+            <a href="#faqs" class="duration-150 ease-out hover:text-secondary">{{catData.title}} FAQs</a>
+          </li>
+        </ol>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="overflow-hidden bg-white shadow sm:rounded-lg mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8 my-6">
-  <div class="px-4 py-5 sm:px-6">
-    <h3 class="text-lg font-medium leading-6 text-gray-900">Certification Information</h3>
-  </div>
-  <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
-    <dl class="sm:divide-y sm:divide-gray-200">
-      <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">Exam Name</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{certData.metadata.examName}}</dd>
-      </div>
-      <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">Exam Code</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{certData.metadata.examCode}}</dd>
-      </div>
-      {{!-- <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">Email address</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
-      </div>
-      <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">Salary expectation</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">$120,000</dd>
-      </div> --}}
-      <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">About</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{certData.metadata.about}}</dd>
-      </div>
-      <div class="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5 sm:px-6">
-        <dt class="text-sm font-medium text-gray-500">Dumps</dt>
-        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-          <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
-            <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-              <div class="flex w-0 flex-1 items-center">
-                <!-- Heroicon name: mini/paper-clip -->
-                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-2 w-0 flex-1 truncate">All {{certData.title}} questions</span>
-              </div>
-              <div class="ml-4 flex-shrink-0">
-                <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="font-medium text-indigo-600 hover:text-indigo-500">View</a>
-              </div>
-            </li>
-          </ul>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
 
+{{!-- 1st section ends --}}
 
 {{!-- <div class="bg-white">
   <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
@@ -118,87 +114,60 @@
 
     <!-- More main page content here... -->
 
-	<div class="relative bg-white py-16 sm:py-24">
-  <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-    <div class="relative sm:py-16 lg:py-0">
-      <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
-        <div class="absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-gray-50 lg:right-72"></div>
-        <svg class="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392">
-          <defs>
-            <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
-        </svg>
+	<div class="relative py-16 sm:py-16 bg-gradient-to-r from-back-dark via-back-semi to-back-light">
+  <div id="why-should" class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+    <div class="relative md:py-16 lg:py-0">
+      <div class="relative mx-auto max-w-md px-4 md:max-w-xl lg:max-w-3xl sm:px-6 lg:px-0 lg:py-8">
+        <img class="" src="/images/whyuse1.svg" alt="">
       </div>
-      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-        <!-- Testimonial card-->
-        <div class="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
-          <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100" alt="">
-          <div class="absolute inset-0 bg-indigo-500 mix-blend-multiply"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-indigo-600 via-indigo-600 opacity-90"></div>
-          <div class="relative px-8">
-            <div>
-              {{!-- <img class="h-12" src="/images/5star.png" alt="Workcation"> --}}
-            </div>
-            <blockquote class="mt-8">
-              <div class="relative text-lg font-medium text-white md:flex-grow">
-                <svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-indigo-400" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                  <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                </svg>
-                <p class="relative">{{certData.metadata.testimonial}}</p>
-              </div>
-
-              <footer class="mt-4">
-                <p class="text-base font-semibold text-indigo-200">{{certData.metadata.testimonialFrom}}</p>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-      <!-- Content area -->
-      <div class="pt-12 sm:pt-16 lg:pt-20">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why use free {{certData.title}} certification dumps?</h2>
-        <div class="mt-6 space-y-6 text-gray-500">
-          <p class="text-lg">{{certData.metadata.whyCertification.[0]}}</p>
-          <p class="text-base leading-7">{{certData.metadata.whyCertification.[1]}}</p>
-          <p class="text-base leading-7">{{certData.metadata.whyCertification.[2]}}</p>
-        </div>
-      </div>
-
-      <!-- Stats section -->
-      <div class="mt-10">
-        <dl class="grid grid-cols-2 gap-x-4 gap-y-8">
-          <div class="border-t-2 border-gray-100 pt-6">
-            <dt class="text-base font-medium text-gray-500">Price</dt>
-            <dd class="text-3xl font-bold tracking-tight text-gray-900">0$ Always</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-100 pt-6">
-            <dt class="text-base font-medium text-gray-500">Questions</dt>
-            <dd class="text-3xl font-bold tracking-tight text-gray-900">200+</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-100 pt-6">
-            <dt class="text-base font-medium text-gray-500">Quality</dt>
-            <dd class="text-3xl font-bold tracking-tight text-gray-900">99.9%</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-100 pt-6">
-            <dt class="text-base font-medium text-gray-500">Students</dt>
-            <dd class="text-3xl font-bold tracking-tight text-gray-900">100K+</dd>
-          </div>
-        </dl>
-        <div class="mt-10">
-          <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-indigo-600">
+      <div class="text-center">
+          <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-gray-100 bg-gray-700 rounded-md px-4 py-4 hover:bg-gray-600">
             Start preparing now
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
+    </div>
+
+    <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+      <!-- Content area -->
+      <div class="pt-12 sm:pt-16 lg:pt-8">
+        <h2 class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">Why use our free {{catData.title}}?</h2>
+        <div class="mt-6 space-y-6 text-gray-300">
+          <p class="text-md md:text-lg">{{certData.metadata.whyCertification.[0]}}</p>
+          <p class="text-md md:text-lg">{{certData.metadata.whyCertification.[1]}}</p>
+          {{!-- <p class="text-base leading-7">{{certData.metadata.whyCertification.[2]}}</p> --}}
+        </div>
+      </div>
+
+      <!-- Stats section -->
+      <div class="mt-6">
+        <dl class="grid grid-cols-2 gap-x-4 gap-y-4">
+          <div class="border-t-2 border-gray-700 pt-6">
+            <dt class="text-base font-medium text-gray-500">Price</dt>
+            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">0$ Always</dd>
+          </div>
+
+          <div class="border-t-2 border-gray-700 pt-6">
+            <dt class="text-base font-medium text-gray-500">Questions</dt>
+            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">50+</dd>
+          </div>
+
+          <div class="border-t-2 border-gray-700 pt-6">
+            <dt class="text-base font-medium text-gray-500">Quality</dt>
+            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">99.9%</dd>
+          </div>
+
+          <div class="border-t-2 border-gray-700 pt-6">
+            <dt class="text-base font-medium text-gray-500">Students</dt>
+            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">100K+</dd>
+          </div>
+        </dl>
+        {{!-- <div class="mt-10">
+          <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-indigo-600">
+            Start preparing now
+            <span aria-hidden="true"> &rarr;</span>
+          </a>
+        </div> --}}
       </div>
     </div>
   </div>
