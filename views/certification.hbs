@@ -7,7 +7,7 @@
       <h1 class="text-3xl leading-none sm:text-4xl md:text-5xl font-bold">{{catData.title}}</h1>
       
 
-      <p class="mt-4 text-gray-300 leading-normal sm:text-lg md:text-xl text-primary-offset">{{catData.description}}</p>
+      <p class="mt-4 text-gray-300 leading-normal sm:text-lg md:text-xl text-primary-offset tracking-wide">{{catData.description}}</p>
       
       <div class="flex space-x-4 justify-center">
         <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="focus:outline-none inline-flex items-center justify-center font-medium leading-tight shadow-md duration-200 rounded bg-primary-700 text-button px-6 py-3 text-md mt-8 text-primary text-gray-100 hover:bg-primary-900">
@@ -18,7 +18,7 @@
   </div>
 
   <div class="relative hidden w-full max-w-screen-xl px-6 pt-8 mx-auto md:block" style="top:80px;">
-  <div class="bg-gradient-to-t from-gray-300 to-gray-100 rounded-lg shadow">
+  <div class="bg-gradient-to-t from-gray-300 to-gray-200 rounded-lg shadow">
     <section class="text-center mx-auto">
       <h2 class="text-gray-900 tracking-wider uppercase font-bold mb-8 pt-8">Access over 300+ actual asked questions 
       </h2>
@@ -42,17 +42,17 @@
 {{!-- 1st section --}}
 
 
-<div id="what-is" class="relative w-full max-w-screen-xl px-6 py-10 mx-auto text-lg sm:py-24">
+<div id="what-is" class="relative w-full max-w-screen-xl px-8 py-10 mx-auto text-lg sm:py-24">
   <div class="grid gap-10 md:grid-cols-3">
     <div class="flex flex-col col-span-2 justfify-center">
       <ul class="pb-4 text-xl markdown">
         <li>
           <div class="markdown">
-            <h2 class="text-md md:text-3xl font-bold pb-8">What is <strong class="text-primary-900 font-bold">{{catData.title}}</strong> and what does it measure?</h2>
-            <p class="text-base md:text-lg leading-relaxed text-black">
+            <h2 class="text-2xl md:text-4xl font-bold pb-8">What is <strong class="text-primary-900 font-bold">{{catData.title}}</strong> and what does it measure?</h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
               {{certData.metadata.info1}}
             </p><br>
-            <p class="text-base md:text-lg leading-relaxed text-black">
+            <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
               {{certData.metadata.info2}}
             </p>
           </div>
@@ -114,64 +114,154 @@
 
     <!-- More main page content here... -->
 
-	<div class="relative py-16 sm:py-16 bg-gradient-to-r from-back-dark via-back-semi to-back-light">
-  <div id="why-should" class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-    <div class="relative md:py-16 lg:py-0">
-      <div class="relative mx-auto max-w-md px-4 md:max-w-xl lg:max-w-3xl sm:px-6 lg:px-0 lg:py-8">
-        <img class="" src="/images/whyuse1.svg" alt="">
-      </div>
-      <div class="text-center">
-          <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-gray-100 bg-gray-700 rounded-md px-4 py-4 hover:bg-gray-600">
-            Start preparing now
-            <span aria-hidden="true"> &rarr;</span>
-          </a>
+
+
+<div class="bg-gradient-to-r from-back-dark via-back-semi to-back-light">
+  <div class="w-full max-w-screen-xl px-6 py-16 mx-auto">
+    <div  id="why-should" class="-mx-6">
+      <div class="items-center lg:flex">
+        <div class="lg:w-1/2 px-6 order-2">
+          <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 order-2">
+          <!-- Content area -->
+          <div class="pt-6 md:pt-12 lg:pt-8">
+            <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-gray-200 pb-4"><strong  class="font-bold text-primary-400">Why use</strong> {{catData.title}}?</h2>
+            <div class="mt-6 space-y-6 text-gray-300">
+              <p class="text-base md:text-lg tracking-wide font-semibold">{{certData.metadata.whyCertification.[0]}}</p>
+              <p class="text-base md:text-lg tracking-wide font-semibold">{{certData.metadata.whyCertification.[1]}}</p>
+              {{!-- <p class="text-base leading-7">{{certData.metadata.whyCertification.[2]}}</p> --}}
+            </div>
+          </div>
+
+          <!-- Stats section -->
+          <div class="mt-6">
+            <dl class="grid grid-cols-4 gap-x-4 gap-y-4">
+              <div class="border-t-2 border-gray-700 pt-6">
+                <dt class="text-base font-medium text-gray-500">Price</dt>
+                <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">0$</dd>
+              </div>
+
+              <div class="border-t-2 border-gray-700 pt-6">
+                <dt class="text-base font-medium text-gray-500">Questions</dt>
+                <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">50+</dd>
+              </div>
+
+              <div class="border-t-2 border-gray-700 pt-6">
+                <dt class="text-base font-medium text-gray-500">Quality</dt>
+                <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">99.9%</dd>
+              </div>
+
+              <div class="border-t-2 border-gray-700 pt-6">
+                <dt class="text-base font-medium text-gray-500">Students</dt>
+                <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">10K+</dd>
+              </div>
+            </dl>
+            {{!-- <div class="mt-10">
+              <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-indigo-600">
+                Start preparing now
+                <span aria-hidden="true"> &rarr;</span>
+              </a>
+            </div> --}}
+          </div>
         </div>
-    </div>
-
-    <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-      <!-- Content area -->
-      <div class="pt-12 sm:pt-16 lg:pt-8">
-        <h2 class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">Why use our free {{catData.title}}?</h2>
-        <div class="mt-6 space-y-6 text-gray-300">
-          <p class="text-md md:text-lg">{{certData.metadata.whyCertification.[0]}}</p>
-          <p class="text-md md:text-lg">{{certData.metadata.whyCertification.[1]}}</p>
-          {{!-- <p class="text-base leading-7">{{certData.metadata.whyCertification.[2]}}</p> --}}
         </div>
-      </div>
-
-      <!-- Stats section -->
-      <div class="mt-6">
-        <dl class="grid grid-cols-2 gap-x-4 gap-y-4">
-          <div class="border-t-2 border-gray-700 pt-6">
-            <dt class="text-base font-medium text-gray-500">Price</dt>
-            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">0$ Always</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-700 pt-6">
-            <dt class="text-base font-medium text-gray-500">Questions</dt>
-            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">50+</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-700 pt-6">
-            <dt class="text-base font-medium text-gray-500">Quality</dt>
-            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">99.9%</dd>
-          </div>
-
-          <div class="border-t-2 border-gray-700 pt-6">
-            <dt class="text-base font-medium text-gray-500">Students</dt>
-            <dd class="text-xl md:text-3xl font-bold tracking-tight text-gray-200">100K+</dd>
-          </div>
-        </dl>
-        {{!-- <div class="mt-10">
-          <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="text-base font-medium text-indigo-600">
-            Start preparing now
-            <span aria-hidden="true"> &rarr;</span>
-          </a>
-        </div> --}}
+        <div class="relative flex justify-center px-4 lg:w-1/2">
+          <span class="z-40 w-full" style="max-width: 450px;">
+              <img class="" src="/images/whyuse2.svg" alt="">
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+{{!-- Format section --}}
+
+
+
+<div class="">
+  <div id="the-format" class="w-full max-w-screen-xl px-6 py-20 mx-auto">
+    <div class="-mx-6">
+      <div class="items-center lg:flex">
+        <div class="lg:w-1/2 px-6">
+          <h2 class="mt-2 pb-8 leading-none text-gray-900 text-2xl md:text-4xl font-bold"><strong class="font-bold text-primary-900">Format</strong> of {{catData.title}}</h2>
+          <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
+            {{certData.metadata.format1}}
+          </p>
+          <br>
+          <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
+            {{certData.metadata.format2}}
+          </p>
+        </div>
+        <div class="relative flex justify-center px-4 lg:w-1/2">
+          <span class="z-40 w-full" style="max-width: 450px;">
+              <img class="" src="/images/format3.svg" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{{!-- score card section --}}
+
+
+
+<div class="bg-gradient-to-r from-back-dark via-back-semi to-back-light">
+  <div class="w-full max-w-screen-xl px-6 py-20 mx-auto">
+    <div class="-mx-6">
+      <div class="items-center lg:flex">
+        <div class="order-2 lg:w-1/2 px-6">
+          <h3 class="mt-2 mb-8 text-2xl md:text-4xl font-bold leading-none text-gray-200">View sample <strong  class="font-bold text-primary-400">score card</strong></h3>
+          <p class="pb-8 text-gray-300 text-base md:text-lg leading-relaxed tracking-wide font-semibold">The process of evaluating a candidate's performance on the {{catData.title}} and other assessments involves compiling the results of these assessments into a comprehensive report. </p>
+          <p class="pb-8 text-gray-300 text-base md:text-lg leading-relaxed tracking-wide font-semibold">The candidate report is designed to provide a detailed overview of the candidate's strengths and weaknesses, as well as their overall performance on the various assessments they have taken. It can be used by employers and managers to make informed decisions about the candidate's suitability.</p>
+          <div class="mt-6">
+          <a target="_blank" href="/images/score.jpg" download class="text-gray-100 bg-gray-600 hover:bg-gray-700 focus:outline-none inline-flex items-center justify-center md:font-medium leading-tight shadow-md duration-200 rounded bg-secondary hover:bg-secondary-400 text-button px-4 py-2 text-md md:text-lg mb-4">
+            <span>Download sample report</span>
+          </a>
+          <p class="text-gray-200 text-sm">powered by <a>Adaface</a></p>
+        </div>
+        </div>
+        <div class="relative flex justify-center px-4 lg:w-1/2">
+          <span class="z-40 w-full md:rotate-[-2deg]" style="max-width: 450px;">
+              <img class="" src="/images/score.jpg" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{{!-- <div class="bg-gray-200">
+  <div class="container px-12 py-24 mx-auto">
+    <div class="md:flex md:items-center md:justify-center">
+      <div class="relative mb-6 md:w-1/3 md:h-1/3 md:flex md:justify-start md:mb-0 md:ml-24 lg:ml-0">
+        <img src="/images/score.jpg" alt="Sample Report" class="relative z-40 mx-auto transform rounded shadow-lg sm:mx-0 rotate-2">
+      </div>
+      <article class="text-xl md:w-1/2">
+        <h2 class="mt-2 mb-6 text-4xl font-bold leading-none">View a sample report</h2>
+        <p>Results for the Abstract Reasoning Test along with other assessments the candidate takes will be compiled to produce a candidate report. The report is automatically generated and available both online and as a downloadable pdf so they can be shared with other team members and employees alike.</p>
+        <div class="mt-6">
+          <a href="/images/score.jpg" class="focus:outline-none inline-flex items-center justify-center font-medium leading-tight shadow-md duration-200 rounded bg-secondary hover:bg-secondary-400 text-button px-6 py-3 text-lg">
+            <span>Download sample report</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</div> --}}
+
+
 
 
 <div class="bg-indigo-200 bg-opacity-25">

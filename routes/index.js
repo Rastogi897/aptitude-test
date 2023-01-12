@@ -55,7 +55,7 @@ router.get(["/"], (req, res) => {
             "This website provides free certification dumps to help you prepare for your IT certification exams. Get the latest questions and answers for the most popular IT certification exams and instantly download the files you need to succeed.",
         faqsData: [
             {
-                q: "Are employment aptitde tests reliable?",
+                q: "Are employment aptitude tests reliable?",
                 a: "Yes. All of the questions and answers on employment aptitude tests are carefully researched and verified to ensure accuracy. This allows for reliable preparation for your exam.",
             },
             {
