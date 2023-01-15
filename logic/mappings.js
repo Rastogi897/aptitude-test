@@ -13,7 +13,7 @@ var categories = {
     list: [
       {
         slug: "vr-test",
-        title: "AWS Certified Solutions Architect - Associate certification",
+        title: "Verbal Reasoning Test",
         description:
           "Practice for AWS Certified Solutions Architect - Associate certification exams with this 100% Free AWS Certified Solutions Architect - Associate certification dumps. It contains free real exam questions from the actual AWS Certified Solutions Architect - Associate certification tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
@@ -88,7 +88,7 @@ var categories = {
     list: [
       {
         slug: "sr-test",
-        title: "Exam AZ-900: Microsoft Azure Fundamentals",
+        title: "Spatial Reasoning Test",
         description:
           "Practice for AZ-900: Microsoft Azure Fundamentals certification exams with this 100% Free AZ-900: Microsoft Azure Fundamentals dumps. It contains free real exam questions from the actual AZ-900: Microsoft Azure Fundamentals certification tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
@@ -160,7 +160,7 @@ var categories = {
     list: [
       {
         slug: "lr-test",
-        title: "Tableau Certified Data Analyst Exam (TDS-C01)",
+        title: "Logical Reasoning Test",
         description:
           "Practice for Tableau Certified Data Analyst Exam (TDS-C01) with this 100% Free Tableau Certified Data Analyst Exam dumps. It contains free real exam questions from the actual Tableau Certified Data Analyst Exam (TDS-C01) tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
@@ -232,7 +232,7 @@ var categories = {
     list: [
       {
         slug: "ar-test",
-        title: "Splunk SOAR Certified Automation Developer Exam",
+        title: "Abstract Reasoning Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
@@ -303,7 +303,7 @@ var categories = {
     list: [
       {
         slug: "nr-test",
-        title: "Splunk SOAR Certified Automation Developer Exam",
+        title: "Numerical Reasoning Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
