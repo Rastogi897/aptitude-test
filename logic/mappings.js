@@ -6,6 +6,7 @@ var categories = {
   verbal: {
     title: "Verbal Reasoning Test",
     logo: "Verbal",
+    scorecard: "/images/VR_test.pdf",
     description:
       "Verbal reasoning test assess a candidate's ability to analyze written information, critical thinking and problem-solving skills.",
     commentsSlug: "verbal",
@@ -30,8 +31,9 @@ var categories = {
           about:
             "AWS Certified Solutions Architect - Associate showcases knowledge and skills in AWS technology, across a wide range of AWS services. The focus of this certification is on the design of cost and performance optimized solutions, demonstrating a strong understanding of the AWS Well-Architected Framework. This certification can enhance the career profile and earnings of certified individuals and increase your credibility and confidence in stakeholder and customer interactions.",
           testimonial:
-            "I just took and passed the AWS Certified Solutions Architect - Associate exam recently, and I can tell you that the free certification dumps provided by Free Certification Dumps were extremely helpful in my preparation. The dumps were comprehensive, up-to-date, and full of relevant questions that covered all the areas needed to pass the exam. I am now a proud holder of the AWS certification, and I owe it to FCD dumps! Thanks.",
-          testimonialFrom: "Linda Jonson, AWS Architect at Prima Solutions",
+            ["I was extremely impressed with the level of difficulty. The test really tested and improved my ability to think critically.", 
+            "I was pleasantly surprised by how well-structured and well-explained the test was. Test include every variety of problems.",
+            "The verbal reasoning test I took was very well-designed and provided 50+ good quality and straightforward questions."],
           whyCertification: [
             "Using our free verbal reasoning test can help you gain a better understanding of your verbal reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
             "Our test is designed by experienced professionals and experts in the field of aptitude testing, ensuring that it provides an accurate and reliable assessment of your verbal reasoning skills. The test is also unbiased and fair.",
@@ -81,6 +83,7 @@ var categories = {
   spatial: {
     title: "Spatial Reasoning Test",
     logo: "Spatial",
+    scorecard: "/images/SR_test.pdf",
     description:
       "Spatial reasoning test assess a candidate's ability to manipulate 2D and 3D shapes and figures, and ability to visualize.",
     commentsSlug: "spatial",
@@ -106,7 +109,9 @@ var categories = {
           about:
             "Exam AZ-900: Microsoft Azure Fundamentals is an introductory-level certification exam designed to validate knowledge of cloud concepts, Azure services, Azure workloads, security and privacy in Azure, and Azure pricing and support. This exam is great for those new to cloud computing who want to demonstrate their knowledge of Azure. It covers a broad range of topics, including cloud concepts, Azure services, security, privacy, pricing, and support. It is a great first step in preparing for more advanced Azure-related certifications. As an introductory level certification, it is strongly recommended to those new to cloud computing who want to demonstrate their knowledge of Azure.",
           testimonial:
-            "I recently used Free Certification Dumps' AZ-900: Microsoft Azure Fundamentals exam dumps to help me prepare for my Microsoft Azure certification exam. The exam dumps were comprehensive and up to date, containing all the information I needed to be successful. I found the practice tests to be very helpful in familiarizing myself with the exam structure and understanding the types of questions I was likely to encounter. The explanations for each answer were also extremely helpful and provided a deeper understanding of the material. All in all, I was very pleased with Free Certification Dumps and would highly recommend their exam dumps to anyone looking to get certified in Microsoft Azure.",
+            ["I am impressed with the level of problems. I felt like the test really helped me improve my spatial reasoning skills", 
+            "The spatial reasoning test was very well designed and strutured which provided a great balance of easy and difficult questions.",
+            "I found that the spatial reasoning test challenged me to think outside of the box and consider different spatial perspectives."],
           testimonialFrom: "John Smith, Senior Developer, Acme Corporation",
           whyCertification: [
             "Using our free spatial reasoning test can help you gain a better understanding of your spatial reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
@@ -153,6 +158,7 @@ var categories = {
   logical: {
     title: "Logical Reasoning Test",
     logo: "Logical",
+    scorecard: "/images/LR_test.pdf",
     description:
       "Logical reasoning test assess a candidate's ability to think critically and solve problems by analyzing information and arguments.",
     commentsSlug: "logical",
@@ -178,8 +184,9 @@ var categories = {
           about:
             "The Tableau Certified Data Analyst Exam (TDS-C01) is a rigorous examination that tests the knowledge and skills of professionals in data analysis and visualization. The exam covers a wide range of topics, such as data manipulation, data analysis, and data visualization. The exam is based on the Tableau Desktop Professional product, so having experience in working with Tableau is a huge advantage. The exam consists of 50 multiple-choice questions that must be completed in two hours. Passing the exam will demonstrate the candidate's expertise in data analysis and visualization, and will give them the credentials they need to further their career.",
           testimonial:
-            "I recently used Free Certification Dumps' Tableau Certified Data Analyst Exam (TDS-C01) dumps to help me pass the exam and it was an amazing experience. The questions were accurate and up to date with the most recent exam versions. Also, the content was well organized and easy to understand. I was able to increase my knowledge and skills with the help of the TDS-C01 dumps and I am now a certified Tableau Data Analyst. My name is Ibabew, and I am the Senior Data Analyst for Zeineth Company. Thank you Free Certification Dumps for helping me to pass my exam!",
-          testimonialFrom: "Ibabew, Senior Data Analyst, Zeineth Company",
+            ["I am impressed with the level of logical difficulties. The test really improved thinking and logical reasoning skills", 
+            "I appreciate the explanations provided for each question, which helped me understand mistakes and improved my performance",
+            "I found that the logical reasoning test challenged me to think more logically and provided a good variety of problems."],
           whyCertification: [
             "Using our free logical reasoning test can help you gain a better understanding of your logical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
             "Our free test can also help you identify your strengths and weaknesses in logical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
@@ -225,6 +232,7 @@ var categories = {
   abstract: {
     title: "Abstract Reasoning Test",
     logo: "Abstract",
+    scorecard: "/images/AR_test.pdf",
     description:
       "Abstract reasoning test assess a candidate's ability to think and identify patterns and relationships between concepts.",
     commentsSlug: "abstract",
@@ -249,8 +257,9 @@ var categories = {
           about:
             "The Splunk SOAR Certified Automation Developer Exam is a certification exam designed to test a candidate's knowledge of Splunk's Security Orchestration, Automation, and Response (SOAR) platform. The exam is designed to assess a candidate's ability to create and deploy Splunk SOAR applications, integrate with other security and IT operations products, and understand the Splunk SOAR architecture. The certification is designed to validate an individual's skills and expertise in deploying, configuring, and managing Splunk SOAR applications. The Splunk SOAR Certified Automation Developer Exam is a great way for companies to ensure that their security teams are knowledgeable and proficient in their use of Splunk SOAR.",
           testimonial:
-            "I used Free Certification Dumps' Splunk SOAR Certified Automation Developer Exam dumps to help me prepare for my exam and I can confidently say that they made a huge difference. The questions were very similar to the ones I encountered on the exam and the explanations were invaluable in helping me understand the material. I was able to pass the exam with flying colors and I'm grateful to Free Certification Dumps for their help.",
-          testimonialFrom: "John, Automation Developer, Sprints Technologies",
+            ["I found that this abstract reasoning test is one of the excellent tool which improved my abstract reasoning skills. ", 
+            "The abstract reasoning test was an outstanding experience. The questions were challenging and required a good understanding.",
+            "The abstract reasoning test contains some really engaging and quality problems which helped me a lot to improve my skills"],
           whyCertification: [
             "Using our free abstract reasoning test can help you gain a better understanding of your abstract reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
             "Our free test can also help you identify your strengths and weaknesses in abstract reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
@@ -296,6 +305,7 @@ var categories = {
   numerical: {
     title: "Numerical Reasoning Test",
     logo: "Numerical",
+    scorecard: "/images/NR_test.pdf",
     description:
       "Numerical reasoning test assess a candidate's ability to work with numbers and perform basic mathematical operation.",
     commentsSlug: "numerical",
@@ -321,8 +331,9 @@ var categories = {
           about:
             "The Splunk SOAR Certified Automation Developer Exam is a certification exam designed to test a candidate's knowledge of Splunk's Security Orchestration, Automation, and Response (SOAR) platform. The exam is designed to assess a candidate's ability to create and deploy Splunk SOAR applications, integrate with other security and IT operations products, and understand the Splunk SOAR architecture. The certification is designed to validate an individual's skills and expertise in deploying, configuring, and managing Splunk SOAR applications. The Splunk SOAR Certified Automation Developer Exam is a great way for companies to ensure that their security teams are knowledgeable and proficient in their use of Splunk SOAR.",
           testimonial:
-            "I used Free Certification Dumps' Splunk SOAR Certified Automation Developer Exam dumps to help me prepare for my exam and I can confidently say that they made a huge difference. The questions were very similar to the ones I encountered on the exam and the explanations were invaluable in helping me understand the material. I was able to pass the exam with flying colors and I'm grateful to Free Certification Dumps for their help.",
-          testimonialFrom: "John, Automation Developer, Sprints Technologies",
+            ["The numerical reasoning test was very beneficial & informative. The questions required a good understanding of numerical concepts.", 
+            "This numerical reasoning test really helped me understand my strengths and weaknesses in terms of numerical reasoning.",
+            "I am pleasantly surprised by how well-structured the test was. The questions were quite challenging but not impossible,"],
           whyCertification: [
             "Using our free numerical reasoning test can help you gain a better understanding of your numerical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
             "Our free test can also help you identify your strengths and weaknesses in numerical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",

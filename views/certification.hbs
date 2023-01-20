@@ -42,13 +42,13 @@
 {{!-- 1st section --}}
 
 
-<div id="what-is" class="relative w-full max-w-screen-xl px-8 py-10 mx-auto text-lg sm:py-20">
+<div id="what-is" class="relative w-full max-w-screen-xl px-6 sm:px-8 py-10 mx-auto text-lg sm:py-20">
   <div class="grid gap-10 md:grid-cols-3">
     <div class="flex flex-col col-span-2 justfify-center">
       <ul class="pb-4 text-xl markdown">
         <li>
           <div class="markdown">
-            <h2 class="text-2xl md:text-4xl font-bold pb-8">What is <strong class="text-primary-900 font-bold">{{catData.title}}</strong> and what does it measure?</h2>
+            <h2 class="text-2xl sm:text-4xl font-bold pb-8">What is <strong class="text-primary-900 font-bold">{{catData.title}}</strong> and what does it measure?</h2>
             <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
               {{certData.metadata.info1}}
             </p><br>
@@ -61,7 +61,7 @@
     </div>
     <div class="col-span-2 space-y-8 md:col-span-1 md:mt-6">
       <div class="p-6 text-base bg-gradient-to-r from-back-dark via-back-semi to-back-light rounded-lg shadow">
-        <h4 class="mb-4 text-lg font-medium text-primary-400">Jump to a section on this page:</h4>
+        <h4 class="mb-4 text-lg font-medium text-gray-100">Jump to a section on this page:</h4>
         <ol class="space-y-3 list-none list-inside">
           <li class="text-gray-300 hover:text-gray-200">
             <a href="#what-is" class="duration-150 ease-out hover:text-secondary">What is an {{catData.title}} and what does it measure?</a>
@@ -74,6 +74,9 @@
           </li>
           <li class="text-gray-300 hover:text-gray-200">
             <a href="#score" class="duration-150 ease-out hover:text-secondary">{{catData.title}} score card</a>
+          </li>
+          <li class="text-gray-300 hover:text-gray-200">
+            <a href="#review" class="duration-150 ease-out hover:text-secondary">Satisfactory customer Reviews</a>
           </li>
         </ol>
       </div>
@@ -117,14 +120,14 @@
 
 
 <div class="bg-gradient-to-r from-back-dark via-back-semi to-back-light">
-  <div class="w-full max-w-screen-xl px-8 py-20 mx-auto pb-24">
+  <div class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto pb-8 sm:pb-24">
     <div  id="why-should" class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
           <div class="relative mx-auto max-w-md sm:max-w-3xl sm:px-6 lg:px-0 order-2">
           <!-- Content area -->
           <div class="pt-6 md:pt-12 lg:pt-8">
-            <h2 class="text-2xl md:text-4xl font-bold tracking-tight text-gray-200 pb-4"><strong  class="font-bold text-primary-400">Why use</strong> {{catData.title}}?</h2>
+            <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-gray-200 pb-4"><strong  class="font-bold text-primary-400">Why use</strong> {{catData.title}}?</h2>
             <div class="mt-6 space-y-6 text-gray-300">
               <p class="text-base md:text-lg tracking-wide font-semibold">{{certData.metadata.whyCertification.[0]}}</p>
               <p class="text-base md:text-lg tracking-wide font-semibold">{{certData.metadata.whyCertification.[1]}}</p>
@@ -181,11 +184,11 @@
 
 
 <div class="bg-gray-200">
-  <div id="the-format" class="w-full max-w-screen-xl px-8 py-20 mx-auto">
+  <div id="the-format" class="w-full max-w-screen-xl px-6 sm:px-8 py-12 sm:py-20 mx-auto">
     <div class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6">
-          <h2 class="mt-2 pb-8 leading-none text-gray-900 text-2xl md:text-4xl font-bold"><strong class="font-bold text-primary-900">Format</strong> of {{catData.title}}</h2>
+          <h2 class="mt-2 pb-8 leading-none text-gray-900 text-2xl sm:text-4xl font-bold"><strong class="font-bold text-primary-900">Format</strong> of {{catData.title}}</h2>
           <p class="text-base md:text-lg leading-relaxed text-gray-700 tracking-wide font-semibold">
             {{certData.metadata.format1}}
           </p>
@@ -212,7 +215,7 @@
 
 
 <div class="bg-gradient-to-r from-back-dark via-back-semi to-back-light">
-  <div id="score" class="w-full max-w-screen-xl px-8 py-20 mx-auto">
+  <div id="score" class="w-full max-w-screen-xl px-6 sm:px-8 py-12 sm:py-20 mx-auto">
     <div class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
@@ -220,7 +223,7 @@
           <p class="pb-8 text-gray-300 text-base md:text-lg leading-relaxed tracking-wide font-semibold">The process of evaluating a candidate's performance on the {{catData.title}} and other assessments involves compiling the results of these assessments into a comprehensive report. </p>
           <p class="pb-8 text-gray-300 text-base md:text-lg leading-relaxed tracking-wide font-semibold">The candidate report is designed to provide a detailed overview of the candidate's strengths and weaknesses, as well as their overall performance on the various assessments they have taken. It can be used by employers and managers to make informed decisions about the candidate's suitability.</p>
           <div class="mt-6">
-          <a target="_blank" href="/images/score.jpg" download class="text-gray-100 bg-gray-600 hover:bg-gray-700 inline-flex items-center justify-center md:font-medium leading-tight shadow-md duration-200 rounded bg-secondary hover:bg-secondary-400 text-button px-4 py-2 text-md md:text-lg mb-4">
+          <a target="_blank" href={{catData.scorecard}} download class="text-gray-100 bg-gray-700 hover:bg-gray-600 inline-flex items-center justify-center md:font-medium leading-tight shadow-md duration-200 rounded bg-secondary hover:bg-secondary-400 text-button px-4 py-2 text-md md:text-lg mb-4">
             <span>Download sample report</span>
           </a>
           <p class="text-gray-200 text-sm">powered by <a target="_blank" class="font-semibold underline decoration-gray-400 underline-offset-4 duration-200 hover:decoration-gray-50" href="https://www.adaface.com/">Adaface</a></p>
@@ -266,46 +269,232 @@
 {{!-- review --}}
 
 
-<section class="relative bg-gray-200">
-  <div class="overflow-x-hidden bg-gray-200 pb-4 pt-24">
-    
-    <div class="relative max-w-4xl mx-auto px-8 sm:px-16">
-      <div class="relative text-left bg-gradient-to-r from-back-dark via-back-semi to-primary-900 px-4 py-2 rounded-md">
-        <figure class="block px-4">
-          <span class="block h-2 w-16 bg-secondary mb-4"></span>
-          <div class="flex items-left pb-2">
-            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<section class="bg-gray-200">
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:pt-24 lg:px-8">
+    <div id="review" class="mx-auto max-w-xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl">
+        Read <strong class="font-bold text-violet-800">trusted reviews</strong> from our customers
+      </h2>
+    </div>
+
+    <div
+      class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-16 lg:grid-cols-3">
+      <div class=" rounded-md bg-gray-200">
+        <blockquote
+          class=" flex flex-col justify-between rounded-lg p-12 pt-6 text-center shadow-xl"
+        >
+          <p class="text-lg font-bold text-gray-900">John Smith</p>
+          <p class="mt-1 text-sm font-medium text-gray-800">
+            HR Manager, Acme Inc.
+          </p>
+          <p class="mt-4 text-sm sm:text-md text-gray-700">
+            {{certData.metadata.testimonial.[0]}}
+          </p>
+
+          <div class="mt-8 flex justify-center gap-0.5 text-primary-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
           </div>
-          <blockquote class="relative text-base md:text-lg mx-auto mb-4 font-semibold text-gray-200">"I found the {{certData.title}} to be well-designed and informative. They helped me to understand my strengths and weaknesses, and provided guidance for future career development. I highly recommend these tests to anyone looking to gain insight into their abilities."</blockquote>
-          <figcaption class="mt-8">
-            <div class="flex items-center justify-end">
-              {{!-- <div class="flex-shrink-0 inline-flex rounded-full border-2 border-secondary">
-                <img class="h-16 w-16 rounded-full" src="https://res.cloudinary.com/picked/image/upload/v1607596586/cms/picked-testimonials-1607596586.jpg" alt="Christina, HR Director, Cancer Research, UK" loading="lazy" width="64" height="64">
-              </div> --}}
-              <div class="ml-4">
-                <div class="text-base leading-6 font-medium text-gray-300">Siddharth, Co-founder, Adaface, Singapore</div>
-              </div>
-            </div>
-          </figcaption>
-        </figure>
+        </blockquote>
       </div>
+
+      <div class=" rounded-md bg-gray-200">
+        <blockquote
+          class="flex flex-col justify-between rounded-lg p-12  pt-6 text-center shadow-xl"
+        >
+          <p class="text-lg font-bold text-gray-900">James Garcia</p>
+          <p class="mt-1 text-sm font-medium text-gray-800">
+            IT Engineer, DigitalWorks
+          </p>
+          <p class="mt-4 text-sm sm:text-md text-gray-700">
+            {{certData.metadata.testimonial.[1]}}
+          </p>
+
+          <div class="mt-8 flex justify-center gap-0.5 text-primary-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+          </div>
+        </blockquote>
+      </div>
+
+      <div class=" rounded-md bg-gray-200">
+        <blockquote
+          class="flex flex-col justify-between rounded-lg p-12 pt-6 text-center shadow-xl"
+        >
+          <p class="text-lg font-bold text-gray-900">William Robinson</p>
+          <p class="mt-1 text-sm font-medium text-gray-800">
+            Accounts Manager, SoftPro
+          </p>
+          <p class="mt-4 text-sm sm:text-md text-gray-700">
+            {{certData.metadata.testimonial.[2]}}
+          </p>
+
+          <div class="mt-8 flex justify-center gap-0.5 text-primary-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+              />
+            </svg>
+          </div>
+        </blockquote>
+      </div>
+
     </div>
   </div>
 </section>
 
 
-
 <div class="bg-gray-200">
-  <div class="mx-auto max-w-2xl py-16 px-4 text-center sm:pt-8 sm:pb-20 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-      <span class="block text-gray-800">Start practicing with our free {{certData.title}} today.</span>
+  <div class="mx-auto max-w-2xl px-4 text-center sm:pb-20 sm:px-6">
+    <p class="text-gring-offset-warm-gray-500 mx-auto mt-4 max-w-lg text-md sm:text-lg font-semibold">
+        Just don't take our words for it, Try the free {{certData.title}} by yourself.
+      </p>
+    <h2 class="text-xl font-bold tracking-tight text-white sm:text-xl">
+      
+      {{!-- <span class="block text-gray-800">Start practicing Now!!</span> --}}
     </h2>
-    <p class="mt-4 text-lg leading-6 text-primary-900">Boost your productivity.</p>
-    <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary-700 px-5 py-3 text-base font-medium text-gray-200 hover:bg-primary-600 sm:w-auto">View questions</a>
+    <a href="/exam/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="mb-4 mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary-700 px-5 py-3 text-base font-medium text-gray-200 hover:bg-primary-600 sm:w-auto duration-200">Start Practicing Now!</a>
   </div>
 </div>
 
