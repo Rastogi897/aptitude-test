@@ -59,16 +59,20 @@ router.get(["/"], (req, res) => {
                 a: "Yes. All of the questions and answers on employment aptitude tests are carefully researched and verified to ensure accuracy. This allows for reliable preparation for your exam.",
             },
             {
-                q: "Is it safe to use employment aptitude test?",
-                a: "Yes. the users are kept securely in an encrypted platform and are 100% safe to use.",
+                q: "Is it free to use employment aptitude test?",
+                a: "Yes. all the tests are absolutly free for our users. It requires no Credit card or sign up. Expreience the smooth process and improve our aptitude skills with free and quality problems",
             },
             {
-                q: "What type of information should I expect to find in employment aptitude tests?",
-                a: "Free employment aptitude tests provide you with actual exam questions, detailed explanations, and practice sets. They also have community discussion boards and time tracking tools so you can maximize your performance on the exam.",
+                q: "What type of information are available in employment aptitude tests?",
+                a: "Free employment aptitude tests provide you with actual exam questions, detailed explanations, and practice sets. It contains time tracking tools so you can maximize your performance",
             },
             {
                 q: "How do I access free aptitude tests?",
                 a: "These tests are available to view and read for free on this website unlike many websites where you have to login.",
+            },
+            {
+                q: "What domains are covered in the tests?",
+                a: "The tests contains all major domains, including verbal, spatial, abstract, logical, numerical, error detection, data interpretation and english. Each of them conatains 50+ qualily problems and free tests ",
             },
         ],
     });

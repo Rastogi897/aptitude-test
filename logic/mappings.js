@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 var categories = {
   verbal: {
     title: "Verbal Reasoning Test",
-    logo: "Verbal",
+    logo: "Verbal Reasoning",
     scorecard: "/images/VR_test.pdf",
     description:
       "Verbal reasoning test assess a candidate's ability to analyze written information, critical thinking and problem-solving skills.",
@@ -82,7 +82,7 @@ var categories = {
   },
   spatial: {
     title: "Spatial Reasoning Test",
-    logo: "Spatial",
+    logo: "Spatial Reasoning",
     scorecard: "/images/SR_test.pdf",
     description:
       "Spatial reasoning test assess a candidate's ability to manipulate 2D and 3D shapes and figures, and ability to visualize.",
@@ -157,7 +157,7 @@ var categories = {
   },
   logical: {
     title: "Logical Reasoning Test",
-    logo: "Logical",
+    logo: "Logical Reasoning",
     scorecard: "/images/LR_test.pdf",
     description:
       "Logical reasoning test assess a candidate's ability to think critically and solve problems by analyzing information and arguments.",
@@ -231,7 +231,7 @@ var categories = {
   },
   abstract: {
     title: "Abstract Reasoning Test",
-    logo: "Abstract",
+    logo: "Abstract Reasoning",
     scorecard: "/images/AR_test.pdf",
     description:
       "Abstract reasoning test assess a candidate's ability to think and identify patterns and relationships between concepts.",
@@ -304,7 +304,7 @@ var categories = {
   },
   numerical: {
     title: "Numerical Reasoning Test",
-    logo: "Numerical",
+    logo: "Numerical Reasoning",
     scorecard: "/images/NR_test.pdf",
     description:
       "Numerical reasoning test assess a candidate's ability to work with numbers and perform basic mathematical operation.",
@@ -373,6 +373,133 @@ var categories = {
       {
         f: "Splunk Core Certified Developer",
         d: "This certification verifies your ability to develop Splunk applications, tailored searches, and other custom solutions.",
+      },
+    ],
+  },
+
+  error: {
+    title: "Error Checking Test",
+    logo: "Error Checking",
+    scorecard: "/images/NR_test.pdf",
+    description:
+      "Error checking test access the ability to diagnose the presence or absence of a error and condition in a system or device.",
+    commentsSlug: "error",
+    sublink: "ec-test",
+    list: [
+      {
+        slug: "ec-test",
+        title: "Numerical Reasoning Test",
+        description:
+          "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
+        sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
+        gId: "730868487",
+        baseGId: "0",
+        commentsSlug: "nr-test",
+        metadata: {
+
+          info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
+
+          info2:"Numerical reasoning tests typically consist of a series of problems or questions that require the test taker to analyze numerical information and make calculations, such as mathematical equations or simple arithmetic. The test may also include questions on data interpretation, such as the ability to understand and interpret charts and graphs, and on numerical estimation, such as the ability to make approximate calculations based on incomplete information. Numerical reasoning tests are designed to measure a range of skills, including the ability to understand and work with numerical information and the ability to analyze and interpret data.",
+
+          examName: "Splunk SOAR Certified Automation Developer Exam",
+          examCode: "SPLK-2003",
+          about:
+            "The Splunk SOAR Certified Automation Developer Exam is a certification exam designed to test a candidate's knowledge of Splunk's Security Orchestration, Automation, and Response (SOAR) platform. The exam is designed to assess a candidate's ability to create and deploy Splunk SOAR applications, integrate with other security and IT operations products, and understand the Splunk SOAR architecture. The certification is designed to validate an individual's skills and expertise in deploying, configuring, and managing Splunk SOAR applications. The Splunk SOAR Certified Automation Developer Exam is a great way for companies to ensure that their security teams are knowledgeable and proficient in their use of Splunk SOAR.",
+          testimonial:
+            ["The numerical reasoning test was very beneficial & informative. The questions required a good understanding of numerical concepts.", 
+            "This numerical reasoning test really helped me understand my strengths and weaknesses in terms of numerical reasoning.",
+            "I am pleasantly surprised by how well-structured the test was. The questions were quite challenging but not impossible,"],
+          whyCertification: [
+            "Using our free numerical reasoning test can help you gain a better understanding of your numerical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
+            "Our free test can also help you identify your strengths and weaknesses in numerical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
+          ],
+          format1:"Numerical reasoning tests are a type of assessment that are designed to measure an individual's ability to understand and interpret numerical data. These tests typically consist of a set of multiple-choice questions that involve mathematical concepts such as arithmetic and basic statistics.",
+          format2:"The format of these tests can vary depending on the company or organization administering the test. These tests are usually used as a part of the recruitment process for jobs that require strong numerical skills, such as finance, accounting, engineering, and data analysis.",
+        },
+      },
+    ],
+  },
+  data: {
+    title: "Data Interpretation Test",
+    logo: "Data Interpretation",
+    scorecard: "/images/NR_test.pdf",
+    description:
+      "Data interpretation test analyses the given information and interpret the given data according to the context and purpose.",
+    commentsSlug: "data",
+    sublink: "di-test",
+    list: [
+      {
+        slug: "di-test",
+        title: "Numerical Reasoning Test",
+        description:
+          "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
+        sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
+        gId: "730868487",
+        baseGId: "0",
+        commentsSlug: "nr-test",
+        metadata: {
+
+          info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
+
+          info2:"Numerical reasoning tests typically consist of a series of problems or questions that require the test taker to analyze numerical information and make calculations, such as mathematical equations or simple arithmetic. The test may also include questions on data interpretation, such as the ability to understand and interpret charts and graphs, and on numerical estimation, such as the ability to make approximate calculations based on incomplete information. Numerical reasoning tests are designed to measure a range of skills, including the ability to understand and work with numerical information and the ability to analyze and interpret data.",
+
+          examName: "Splunk SOAR Certified Automation Developer Exam",
+          examCode: "SPLK-2003",
+          about:
+            "The Splunk SOAR Certified Automation Developer Exam is a certification exam designed to test a candidate's knowledge of Splunk's Security Orchestration, Automation, and Response (SOAR) platform. The exam is designed to assess a candidate's ability to create and deploy Splunk SOAR applications, integrate with other security and IT operations products, and understand the Splunk SOAR architecture. The certification is designed to validate an individual's skills and expertise in deploying, configuring, and managing Splunk SOAR applications. The Splunk SOAR Certified Automation Developer Exam is a great way for companies to ensure that their security teams are knowledgeable and proficient in their use of Splunk SOAR.",
+          testimonial:
+            ["The numerical reasoning test was very beneficial & informative. The questions required a good understanding of numerical concepts.", 
+            "This numerical reasoning test really helped me understand my strengths and weaknesses in terms of numerical reasoning.",
+            "I am pleasantly surprised by how well-structured the test was. The questions were quite challenging but not impossible,"],
+          whyCertification: [
+            "Using our free numerical reasoning test can help you gain a better understanding of your numerical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
+            "Our free test can also help you identify your strengths and weaknesses in numerical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
+          ],
+          format1:"Numerical reasoning tests are a type of assessment that are designed to measure an individual's ability to understand and interpret numerical data. These tests typically consist of a set of multiple-choice questions that involve mathematical concepts such as arithmetic and basic statistics.",
+          format2:"The format of these tests can vary depending on the company or organization administering the test. These tests are usually used as a part of the recruitment process for jobs that require strong numerical skills, such as finance, accounting, engineering, and data analysis.",
+        },
+      },
+    ],
+  },
+  english: {
+    title: "English Test",
+    logo: "English",
+    scorecard: "/images/NR_test.pdf",
+    description:
+      "The English test accesses an individual's knowledge and proficiency of the English language, including grammar.",
+    commentsSlug: "english",
+    sublink: "e-test",
+    list: [
+      {
+        slug: "e-test",
+        title: "Numerical Reasoning Test",
+        description:
+          "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
+        sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
+        gId: "730868487",
+        baseGId: "0",
+        commentsSlug: "nr-test",
+        metadata: {
+
+          info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
+
+          info2:"Numerical reasoning tests typically consist of a series of problems or questions that require the test taker to analyze numerical information and make calculations, such as mathematical equations or simple arithmetic. The test may also include questions on data interpretation, such as the ability to understand and interpret charts and graphs, and on numerical estimation, such as the ability to make approximate calculations based on incomplete information. Numerical reasoning tests are designed to measure a range of skills, including the ability to understand and work with numerical information and the ability to analyze and interpret data.",
+
+          examName: "Splunk SOAR Certified Automation Developer Exam",
+          examCode: "SPLK-2003",
+          about:
+            "The Splunk SOAR Certified Automation Developer Exam is a certification exam designed to test a candidate's knowledge of Splunk's Security Orchestration, Automation, and Response (SOAR) platform. The exam is designed to assess a candidate's ability to create and deploy Splunk SOAR applications, integrate with other security and IT operations products, and understand the Splunk SOAR architecture. The certification is designed to validate an individual's skills and expertise in deploying, configuring, and managing Splunk SOAR applications. The Splunk SOAR Certified Automation Developer Exam is a great way for companies to ensure that their security teams are knowledgeable and proficient in their use of Splunk SOAR.",
+          testimonial:
+            ["The numerical reasoning test was very beneficial & informative. The questions required a good understanding of numerical concepts.", 
+            "This numerical reasoning test really helped me understand my strengths and weaknesses in terms of numerical reasoning.",
+            "I am pleasantly surprised by how well-structured the test was. The questions were quite challenging but not impossible,"],
+          whyCertification: [
+            "Using our free numerical reasoning test can help you gain a better understanding of your numerical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
+            "Our free test can also help you identify your strengths and weaknesses in numerical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
+          ],
+          format1:"Numerical reasoning tests are a type of assessment that are designed to measure an individual's ability to understand and interpret numerical data. These tests typically consist of a set of multiple-choice questions that involve mathematical concepts such as arithmetic and basic statistics.",
+          format2:"The format of these tests can vary depending on the company or organization administering the test. These tests are usually used as a part of the recruitment process for jobs that require strong numerical skills, such as finance, accounting, engineering, and data analysis.",
+        },
       },
     ],
   },
