@@ -13,6 +13,8 @@ var {
     getSingleQuestionOfCert,
 } = require("../logic/mappings");
 
+const { certRender, testRender } = require("./category");
+
 router.get(["/test-notion-page"], async (req, res) => {
     console.log("AAA");
 
@@ -77,5 +79,13 @@ router.get(["/"], (req, res) => {
         ],
     });
 });
+
+router.get("/:category/online-test", (req, res) => {
+    testRender(req.params.category)(req, res);
+})
+
+router.get('/:category', (req, res) => {
+    certRender(req.params.category)(req, res);
+})
 
 module.exports = router;

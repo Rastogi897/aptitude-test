@@ -3,13 +3,13 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 const fetch = require("node-fetch");
 
 var categories = {
-  verbal: {
+  "verbal-reasoning": {
     title: "Verbal Reasoning Test",
-    logo: "Verbal Reasoning",
+    logo: "Verbal",
     scorecard: "/images/VR_test.pdf",
     description:
       "Verbal reasoning test assess a candidate's ability to analyze written information, critical thinking and problem-solving skills.",
-    commentsSlug: "verbal",
+    commentsSlug: "verbal-reasoning",
     sublink: "vr-test",
     list: [
       {
@@ -80,13 +80,13 @@ var categories = {
       },
     ],
   },
-  spatial: {
+  "spatial-reasoning": {
     title: "Spatial Reasoning Test",
-    logo: "Spatial Reasoning",
+    logo: "Spatial",
     scorecard: "/images/SR_test.pdf",
     description:
       "Spatial reasoning test assess a candidate's ability to manipulate 2D and 3D shapes and figures, and ability to visualize.",
-    commentsSlug: "spatial",
+    commentsSlug: "spatial-reasoning",
     sublink: "sr-test",
     list: [
       {
@@ -155,13 +155,13 @@ var categories = {
       },
     ],
   },
-  logical: {
+  "logical-reasoning": {
     title: "Logical Reasoning Test",
-    logo: "Logical Reasoning",
+    logo: "Logical",
     scorecard: "/images/LR_test.pdf",
     description:
       "Logical reasoning test assess a candidate's ability to think critically and solve problems by analyzing information and arguments.",
-    commentsSlug: "logical",
+    commentsSlug: "logical-reasoning",
     sublink: "lr-test",
     list: [
       {
@@ -229,13 +229,13 @@ var categories = {
       },
     ],
   },
-  abstract: {
+  "abstract-reasoning": {
     title: "Abstract Reasoning Test",
-    logo: "Abstract Reasoning",
+    logo: "Abstract",
     scorecard: "/images/AR_test.pdf",
     description:
       "Abstract reasoning test assess a candidate's ability to think and identify patterns and relationships between concepts.",
-    commentsSlug: "abstract",
+    commentsSlug: "abstract-reasoning",
     sublink: "ar-test",
     list: [
       {
@@ -302,13 +302,13 @@ var categories = {
       },
     ],
   },
-  numerical: {
+  "numerical-reasoning": {
     title: "Numerical Reasoning Test",
-    logo: "Numerical Reasoning",
+    logo: "Numerical",
     scorecard: "/images/NR_test.pdf",
     description:
       "Numerical reasoning test assess a candidate's ability to work with numbers and perform basic mathematical operation.",
-    commentsSlug: "numerical",
+    commentsSlug: "numerical-reasoning",
     sublink: "nr-test",
     list: [
       {
@@ -377,24 +377,24 @@ var categories = {
     ],
   },
 
-  error: {
+  "error-checking": {
     title: "Error Checking Test",
     logo: "Error Checking",
     scorecard: "/images/NR_test.pdf",
     description:
       "Error checking test access the ability to diagnose the presence or absence of a error and condition in a system or device.",
-    commentsSlug: "error",
+    commentsSlug: "error-checking",
     sublink: "ec-test",
     list: [
       {
         slug: "ec-test",
-        title: "Numerical Reasoning Test",
+        title: "Error Checking Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
         gId: "730868487",
         baseGId: "0",
-        commentsSlug: "nr-test",
+        commentsSlug: "ec-test",
         metadata: {
 
           info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
@@ -419,24 +419,24 @@ var categories = {
       },
     ],
   },
-  data: {
+  "data-interpretation": {
     title: "Data Interpretation Test",
     logo: "Data Interpretation",
     scorecard: "/images/NR_test.pdf",
     description:
       "Data interpretation test analyses the given information and interpret the given data according to the context and purpose.",
-    commentsSlug: "data",
+    commentsSlug: "data-interpretation",
     sublink: "di-test",
     list: [
       {
         slug: "di-test",
-        title: "Numerical Reasoning Test",
+        title: "Data Interpretation Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
         gId: "730868487",
         baseGId: "0",
-        commentsSlug: "nr-test",
+        commentsSlug: "di-test",
         metadata: {
 
           info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
@@ -461,7 +461,7 @@ var categories = {
       },
     ],
   },
-  english: {
+  "english": {
     title: "English Test",
     logo: "English",
     scorecard: "/images/NR_test.pdf",
@@ -472,13 +472,13 @@ var categories = {
     list: [
       {
         slug: "e-test",
-        title: "Numerical Reasoning Test",
+        title: "English Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
         gId: "730868487",
         baseGId: "0",
-        commentsSlug: "nr-test",
+        commentsSlug: "e-test",
         metadata: {
 
           info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
@@ -522,6 +522,8 @@ async function getQuestionsOfCert({
       error: "Not found",
     };
   }
+
+  var certData = catData.list[0];
   var certData = catData.list.find((x) => x.slug === cert);
   if (!certData) {
     return {

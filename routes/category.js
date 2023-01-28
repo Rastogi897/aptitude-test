@@ -37,20 +37,70 @@ const certRender = (category, cert) => async (req, res) => {
         res.status(404).send("Not found");
         return;
     }
+
+    console.log("catData: ", catData.list[0].metadata)
+    var certData = catData.list[0];
+    // var certData = catData.list.find((x) => x.slug === "vr-test");
+    // console.log("certData: ", certData)
+    // if (!certData) {
+    //     res.status(404).send("Not found");
+    //     return;
+    // }
+
+    res.render("certification", {
+        catData,
+        certData,
+        title: catData.list[0].title,
+        description: catData.list[0].description,
+        canonicalUrl: `https://www.freecertificationdumps.com/exam/${category}}`,
+    });
+};
+
+const testRender = (category) => async (req, res) => {
+    console.log("testRender", category);
+    var catData = categories[category];
+    if (!catData) {
+        res.status(404).send("Not found");
+        return;
+    }
+
+    var cert = catData.list[0].slug;
     var certData = catData.list.find((x) => x.slug === cert);
     if (!certData) {
         res.status(404).send("Not found");
         return;
     }
 
-    res.render("certification", {
+    // check if the req query has nocache param
+    var force = !!req.query.nocache;
+
+    var { success, error, data } = await getQuestionsOfCert({
+        category,
+        cert,
+        page: 1,
+        limit: 20,
+        force,
+    });
+
+    var { data: questions, total, limit } = data || {};
+
+    console.log("questions: ", questions)
+
+    if (!success) {
+        res.status(404).send(error);
+        return;
+    }
+
+    let correctAnswers = new Array(20);
+    correctAnswers.fill(0);
+
+    res.render("test", {
         catData,
         certData,
-        title: certData.title,
-        description: certData.description,
-        canonicalUrl: `https://www.freecertificationdumps.com/exam/${category}/${cert}`,
-    });
-};
+        questions,
+        correctAnswers
+    }
+)};
 
 const certQuestionsPaginationRender =
     (category, cert, page = 1) =>
@@ -61,6 +111,7 @@ const certQuestionsPaginationRender =
             res.status(404).send("Not found");
             return;
         }
+        
         var certData = catData.list.find((x) => x.slug === cert);
         if (!certData) {
             res.status(404).send("Not found");
@@ -100,11 +151,11 @@ const certQuestionsPaginationRender =
             canonicalUrl: `https://www.freecertificationdumps.com/exam/${category}/${cert}/view/page/${page}`,
             nextUrl:
                 page < Math.ceil(total / limit)
-                    ? `/exam/${category}/${cert}/view/page/${page + 1}`
+                    ? `/${category}/${cert}/view/page/${page + 1}`
                     : null,
             prevUrl:
                 page > 1
-                    ? `/exam/${category}/${cert}/view/page/${page - 1}`
+                    ? `/${category}/${cert}/view/page/${page - 1}`
                     : null,
         });
     };
@@ -150,4 +201,5 @@ module.exports = {
     certQuestionsPaginationRender: certQuestionsPaginationRender,
     certRender: certRender,
     certQuestionRender: certQuestionRender,
+    testRender: testRender,
 };

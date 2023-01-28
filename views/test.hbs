@@ -1,0 +1,166 @@
+{{#content "body"}}
+
+<div class="mx-auto mt-8 max-w-5xl">
+  {{!-- Timer --}}
+  <div class="timer flex justify-between">
+    <div class="timer__display">
+      <span class="timer__minutes">00</span>:<span class="timer__seconds">00</span> min
+    </div>
+    <div class="total_time">
+      Total Time: <span class="total_in_min">00</span> min
+    </div>
+  </div>
+	<div class="space-y-16 px-10">
+		{{> test-data}}
+	</div>
+
+  {{!-- HTML Modal, initially hidden but is displayed when timeout happens with text, "Your Time is over. Click OK to evaluate your score." and a OK buttn just below that. Also design it using tailwind css --}}
+  <div class="modal flex flex-col justify-center bg-black/40 items-center p-4 fixed top-0 bottom-0 left-0 right-0 hidden">
+    <div class="modal__content w-1/2 flex flex-col items-center justify-center bg-white text-black p-4">
+      <div class="modal__text">
+        Your Time is over. Click OK to evaluate your score.
+      </div>
+      {{!-- <div class="modal__button flex justify-center mt-3 "> --}}
+        <button class="modal__button__ok inline-block bg-blue-600 text-white mt-3 px-2 py-1">OK</button>
+      {{!-- </div> --}}
+    </div>
+  </div>
+
+
+{{!-- <nav class="flex items-center justify-between border-t border-gray-400 bg-gray-200 px-4 py-3 sm:px-6 mt-20" aria-label="Pagination">
+  <div class="hidden sm:block">
+    <p class="text-sm text-gray-700 font-bold">
+      Showing
+      <span class="font-medium">{{from}}</span>
+      to
+      <span class="font-medium">{{to}}</span>
+      of
+      <span class="font-medium">{{total}}</span>
+      results
+    </p>
+  </div>
+  <div class="flex flex-1 justify-between sm:justify-end">
+    {{#if prevUrl}}<a href="{{prevUrl}}" class="relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Previous</a>{{/if}}
+    {{#if nextUrl}}<a href="{{nextUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Next</a>{{/if}}
+  </div>
+</nav> --}}
+
+
+</div>
+
+<div class="flex w-full justify-center">
+  <button class=" submit-btn p-8 bg-blue-500 text-white">Submit</button>
+</div>
+
+<div class="hidden correctAnswers"></div>
+
+{{!-- When I click on the Submit button above, the submitted answers in the test-data.hbs file is evaluated and appropriate javascript code is run to display correct answers / total answers --}}
+
+	<script>
+    var q = {{{JSONstringify questions}}};
+    
+    // function to evaluate answers
+    function evaluateAnswers() {
+      let count = 0;
+
+      const questions  = document.querySelectorAll('.iquestion')
+      const total = questions.length;
+
+      for(let  i=0; i<total; i++) {
+          // let correctOption = questions[i].querySelector('.iquestion-ans').innerText[0]
+          let correctOption = q[i].correctAnswer;
+
+          // reveals answer
+          questions[i].querySelectorAll('button')[1].click();
+
+          let fieldset = questions[i].querySelector('fieldset');
+          
+          let selectedOptions;
+          if(correctOption.length == 1) {
+            selectedOptions = fieldset.querySelector('input[type="radio"]:checked')
+
+            // if no option is selected
+            if(selectedOptions == null) continue;
+
+            // if selected option is correct, increment count
+            if(Number(selectedOptions.ariaColIndex) + 1 == correctOption[0])
+                count++;
+          } else {
+            selectedOptions = fieldset.querySelectorAll('input[type="checkbox"]:checked')
+
+            // if no option is selected
+            if(selectedOptions == null) continue;
+
+            // if selected option is correct, increment count
+            if(selectedOptions.length == correctOption.length) {
+              let flag = true;
+              for(let j=0; j<selectedOptions.length; j++) {
+                if(Number(selectedOptions[j].ariaColIndex) + 1 != correctOption[j]) {
+                  flag = false;
+                  break;
+                }
+              }
+              if(flag) count++;
+            }
+          }
+      }
+
+      const correctAnswersBox = document.querySelector('.correctAnswers');
+      correctAnswersBox.innerText = `Your score ${count}/${total}`;
+      correctAnswersBox.classList.remove('hidden');
+    }
+
+    // update timer every second
+    let timer = document.querySelector('.timer');
+    let minutes = timer.querySelector('.timer__minutes');
+    let seconds = timer.querySelector('.timer__seconds');
+    let totalTime = timer.querySelector('.total_in_min');
+    let time = 30 * 60;
+    totalTime.innerText = Math.floor(time / 60);
+    let interval  = setInterval(function() {
+      time--;
+      minutes.innerText = Math.floor(time / 60);
+      seconds.innerText = time % 60;
+      if(time == 0) {
+        clearInterval(interval);
+        timeOver();
+      }
+      // console.log(time);
+    }, 1000);
+
+    // function to handle time over
+    function timeOver() {
+      // display modal
+      let modal = document.querySelector('.modal');
+      modal.classList.remove('hidden');
+      modal.querySelector('button').addEventListener('click', function() {
+        modal.classList.add('hidden');
+        evaluateAnswers();
+        disableAll();
+      });
+    }
+
+    // function to disable all radio  buttons and checkboxes
+    function disableAll() {
+      let questions  = document.querySelectorAll('.iquestion')
+      const total = questions.length;
+
+      for(let  i=0; i<total; i++) {
+          let fieldset = questions[i].querySelector('fieldset');
+          let inputs = fieldset.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+          for(let j=0; j<inputs.length; j++) {
+            inputs[j].disabled = true;
+          }
+      }
+    }
+
+    // handing  submit button click event
+    let submitBtn = document.getElementsByClassName('submit-btn')[0];
+    submitBtn.addEventListener('click', function() {
+      evaluateAnswers();
+      clearInterval(interval);
+      disableAll();
+    });
+
+	</script>
+{{/content}}

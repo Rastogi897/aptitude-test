@@ -259,7 +259,7 @@ app.use("/exam/:category/:cert/view/question/:questionId", (req, res) => {
         Number(req.params.questionId) || 1
     )(req, res);
 });
-app.use("/exam/:category/:cert/view/page/:page", (req, res) => {
+app.use("/:category/:cert/view/page/:page", (req, res) => {
     certQuestionsPaginationRender(
         req.params.category,
         req.params.cert,
@@ -269,9 +269,9 @@ app.use("/exam/:category/:cert/view/page/:page", (req, res) => {
 app.use("/exam/:category/:cert", (req, res) => {
     certRender(req.params.category, req.params.cert)(req, res);
 });
-app.use("/exam/:category", (req, res) => {
-    categoryRender(req.params.category)(req, res);
-});
+// app.use("/exam/:category", (req, res) => {
+//     categoryRender(req.params.category)(req, res);
+// });
 
 app.use("/", indexRouter);
 

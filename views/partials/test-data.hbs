@@ -18,7 +18,7 @@
 						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
 							<div class="relative flex items-start py-4">
 								<div class="ml-3 mr-3 flex h-5 items-center">
-									<input id="{{@../index}}-{{@index}}" name="{{@../index}}" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+									<input id="{{@../index}}-{{@index}}" name="{{@../index}}" aria-colindex={{@index}} type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
 								</div>
 								<div class="min-w-0 flex-1 text-sm">
 									<label for="{{@../index}}-{{@index}}" class="select-none font-medium text-gray-700">
@@ -68,10 +68,10 @@
 						{{/each}}
 					{{/equalsLength}}
 				</fieldset>
-				<br/>
-				<div>
+				
+				<div class="hidden">
 					<button data-iquestionindex="{{@key}}" type="button" class="iquestion-eval inline-flex items-center rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-1">Submit</button>
-					<button data-iquestionindex="{{@key}}" type="button" class="iquestion-eval inline-flex items-center rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-1">Reveal Solution</button>
+					<button data-iquestionindex="{{@key}}" type="button" name="reveal" class="iquestion-eval reveal-btn inline-flex items-center rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-1">Reveal Solution</button>
 					{{!-- <a href="" class="inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">View Discussion</a> --}}
 				</div>
 				<div class="iquestion-ans hidden">{{#each correctAnswer}}{{this}}:{{/each}}</div>
@@ -97,7 +97,6 @@
 				// jquery dom ready
 				$(document).ready(function() {
 					$(".iquestion-eval").click(function(){
-						console.log("ss");
 						// get data attribute iquestionindex of clicked element
 						var iquestionindex = $(this).data("iquestionindex");
 						var parent = $(".iquestion" + iquestionindex);
@@ -123,8 +122,8 @@
 								$(this).addClass("iquestion-wrong bg-red-300");
 							}
 						});
-						
-						console.log(ans);
 					})
 				})
+
+				
 		</script>
