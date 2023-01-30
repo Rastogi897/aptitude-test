@@ -392,7 +392,7 @@ var categories = {
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
-        gId: "730868487",
+        gId: "2072618751",
         baseGId: "0",
         commentsSlug: "ec-test",
         metadata: {
@@ -434,7 +434,7 @@ var categories = {
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
-        gId: "730868487",
+        gId: "545781081",
         baseGId: "0",
         commentsSlug: "di-test",
         metadata: {
@@ -476,7 +476,7 @@ var categories = {
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
-        gId: "730868487",
+        gId: "678788395",
         baseGId: "0",
         commentsSlug: "e-test",
         metadata: {

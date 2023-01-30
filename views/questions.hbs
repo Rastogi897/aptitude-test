@@ -1,7 +1,8 @@
 {{#content "body"}}
 
-<div class="mx-auto mt-8 max-w-5xl">
-	<div class="space-y-16 px-10">
+<div class="mx-auto mt-8 max-w-5xl elem">
+
+	<div class="space-y-16 px-10 ques">
 		{{> questions-list}}
 	</div>
 
@@ -18,15 +19,28 @@
     </p>
   </div>
   <div class="flex flex-1 justify-between sm:justify-end">
-    {{#if prevUrl}}<a href="{{prevUrl}}" class="relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Previous</a>{{/if}}
+
+    <button class=" download relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Generate PDF</button>
+
+    {{#if prevUrl}}<a href="{{prevUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Previous</a>{{/if}}
     {{#if nextUrl}}<a href="{{nextUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Next</a>{{/if}}
+  
   </div>
 </nav>
 
 
 </div>
 
+ 
+
 	<script>
 		var q = {{{JSONstringify questions}}};
+
+    let div = document.querySelector(".ques");
+    let btn = document.querySelector(".download");
+      btn.addEventListener('click', () => {
+        html2pdf().from(div).save()
+      }) 
+
 	</script>
 {{/content}}
