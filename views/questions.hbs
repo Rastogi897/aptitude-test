@@ -1,8 +1,8 @@
 {{#content "body"}}
 
-<div class="mx-auto mt-8 max-w-5xl elem">
+<div class="mx-auto mt-8 max-w-5xl" >
 
-	<div class="space-y-16 px-10 ques">
+	<div class="space-y-16 px-10 ques" id="content">
 		{{> questions-list}}
 	</div>
 
@@ -20,7 +20,7 @@
   </div>
   <div class="flex flex-1 justify-between sm:justify-end">
 
-    <button class=" download relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Generate PDF</button>
+    <button id="download" class="relative inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Generate PDF</button>
 
     {{#if prevUrl}}<a href="{{prevUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Previous</a>{{/if}}
     {{#if nextUrl}}<a href="{{nextUrl}}" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900">Next</a>{{/if}}
@@ -36,11 +36,17 @@
 	<script>
 		var q = {{{JSONstringify questions}}};
 
-    let div = document.querySelector(".ques");
-    let btn = document.querySelector(".download");
-      btn.addEventListener('click', () => {
-        html2pdf().from(div).save()
-      }) 
+  $('#download').click(function () {
+    domtoimage.toPng(document.getElementById('content'))
+        .then(function (blob) {
+            var pdf = new jsPDF('l', 'pt', [4000,5000]);
+
+            pdf.addImage(blob, 'PNG', 0, 0, 800, 4000);
+            pdf.save("test.pdf");
+
+            that.options.api.optionsChanged();
+        });
+});
 
 	</script>
 {{/content}}
