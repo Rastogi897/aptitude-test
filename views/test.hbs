@@ -2,11 +2,13 @@
 
 <div class="mx-auto mt-8 max-w-5xl">
   {{!-- Timer --}}
-  <div class="timer flex justify-between">
-    <div class="timer__display">
-      <span class="timer__minutes">00</span>:<span class="timer__seconds">00</span> min
+  <div class="timer flex justify-between ml-9 mr-9 mb-6 px-6 bg-gray-100 py-4 rounded-lg shadow-sm shadow-gray-300">
+    <h3 class="text-2xl font-bold text-gray-800 mt-1">{{certData.title}}</h3>
+    <div class=" px-4 py-2 font-semibold shadow-md rounded-md timer__display bg-gray-800 text-white">
+      <span>Time left </span>
+      <span class="timer__minutes">30</span>:<span class="timer__seconds">00</span> min
     </div>
-    <div class="total_time">
+    <div class="total_time hidden">
       Total Time: <span class="total_in_min">00</span> min
     </div>
   </div>
@@ -14,7 +16,7 @@
 		{{> test-data}}
 	</div>
 
-  {{!-- HTML Modal, initially hidden but is displayed when timeout happens with text, "Your Time is over. Click OK to evaluate your score." and a OK buttn just below that. Also design it using tailwind css --}}
+  {{!-- HTML Modal, initially hidden --}}
   <div class="modal flex flex-col justify-center bg-black/40 items-center p-4 fixed top-0 bottom-0 left-0 right-0 hidden">
     <div class="modal__content w-1/2 flex flex-col items-center justify-center bg-white text-black p-4">
       <div class="modal__text">
@@ -48,12 +50,15 @@
 
 </div>
 
-<div class="flex w-full justify-center">
-  <button class=" submit-btn p-8 bg-blue-500 text-white">Submit</button>
+<div class="flex w-full justify-center pb-6">
+  <button class="text-lg submit-btn px-4 py-2 rounded-md font-bold mt-6 bg-blue-500 text-white">Submit Test</button>
 </div>
 
 <div class="hidden correctAnswers"></div>
-
+<div class="hidden totalquestion"></div>
+<div class="hidden answered"></div>
+<div class="hidden unanswered"></div>
+<div class="border-b-2 border-gray-200"></div>
 {{!-- When I click on the Submit button above, the submitted answers in the test-data.hbs file is evaluated and appropriate javascript code is run to display correct answers / total answers --}}
 
 	<script>
@@ -62,6 +67,7 @@
     // function to evaluate answers
     function evaluateAnswers() {
       let count = 0;
+      let noans = 0;
 
       const questions  = document.querySelectorAll('.iquestion')
       const total = questions.length;
@@ -80,7 +86,10 @@
             selectedOptions = fieldset.querySelector('input[type="radio"]:checked')
 
             // if no option is selected
-            if(selectedOptions == null) continue;
+            if(selectedOptions == null){
+              noans++;
+              continue;
+            }
 
             // if selected option is correct, increment count
             if(Number(selectedOptions.ariaColIndex) + 1 == correctOption[0])
@@ -106,8 +115,20 @@
       }
 
       const correctAnswersBox = document.querySelector('.correctAnswers');
-      correctAnswersBox.innerText = `Your score ${count}/${total}`;
+      correctAnswersBox.innerText = `Your score: ${count}/${total}`;
       correctAnswersBox.classList.remove('hidden');
+
+      const totalAnswersBox = document.querySelector('.totalquestion');
+      totalAnswersBox.innerText = `Total number of questions: ${total}`;
+      totalAnswersBox.classList.remove('hidden')
+
+      const AnsweredBox = document.querySelector('.answered');
+      AnsweredBox.innerText = `Number of answered questions: ${total-noans}`;
+      AnsweredBox.classList.remove('hidden')
+
+      const unansweredBox = document.querySelector('.unanswered');
+      unansweredBox.innerText = `Number of unanswered questions: ${noans}`;
+      unansweredBox.classList.remove('hidden')
     }
 
     // update timer every second

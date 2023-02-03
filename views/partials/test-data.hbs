@@ -18,7 +18,7 @@
 						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
 							<div class="relative flex items-start py-4">
 								<div class="ml-3 mr-3 flex h-5 items-center">
-									<input id="{{@../index}}-{{@index}}" name="{{@../index}}" aria-colindex={{@index}} type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+									<input id="{{@../index}}-{{@index}}" name="{{@../index}}" aria-colindex={{@index}} type="radio" class="h-4 w-4 border-gray-300 text-blue-500 focus:ring-blue-500">
 								</div>
 								<div class="min-w-0 flex-1 text-sm">
 									<label for="{{@../index}}-{{@index}}" class="select-none font-medium text-gray-700">
@@ -46,7 +46,7 @@
 						<div data-optionindex="{{@index}}" class="iquestion-option mt-4 divide-y divide-gray-200 border-t border-b border-gray-200">
 							<div class="relative flex items-start py-4">
 								<div class="ml-3 mr-3 flex h-5 items-center">
-									<input id="{{@../index}}-{{@index}}" name="{{@../index}}-{{@index}}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
+									<input id="{{@../index}}-{{@index}}" name="{{@../index}}-{{@index}}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"/>
 								</div>
 								<div class="min-w-0 flex-1 text-sm">
 									<label for="{{@../index}}-{{@index}}" class="select-none font-medium text-gray-700">
@@ -75,7 +75,7 @@
 					{{!-- <a href="" class="inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">View Discussion</a> --}}
 				</div>
 				<div class="iquestion-ans hidden">{{#each correctAnswer}}{{this}}:{{/each}}</div>
-				<div class="mt-6 hidden iquestion-answer">
+				<div class="mt-6 hidden iquestion-answer font-semibold text-gray-800 text-md bg-gray-50 rounded-md px-4 py-2">
 					Correct Answer: {{#each correctAnswer}}
 						{{#gt @index 0}},{{/gt}}
 						{{#eq this '1'}}A{{/eq}}

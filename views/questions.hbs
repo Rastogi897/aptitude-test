@@ -36,17 +36,50 @@
 	<script>
 		var q = {{{JSONstringify questions}}};
 
-  $('#download').click(function () {
-    domtoimage.toPng(document.getElementById('content'))
-        .then(function (blob) {
-            var pdf = new jsPDF('l', 'pt', [4000,5000]);
+    // code to generate - 1
+    /*var doc = new jsPDF();
+    var content = document.getElementById("content").innerHTML;
 
-            pdf.addImage(blob, 'PNG', 0, 0, 800, 4000);
-            pdf.save("test.pdf");
+    content = content.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
+    content = content.replace(/<img/g, '<img style="width:30px;"');
 
-            that.options.api.optionsChanged();
-        });
-});
+    doc.fromHTML(content, 15, 15, {
+      'width': 190
+    });
+
+    document.getElementById("download").addEventListener("click", function () {
+      doc.save('content.pdf');
+    });*/
+
+    // code to generate - 2
+    document.getElementById("download").addEventListener("click", function () {
+      var pdf = new jsPDF('p', 'pt', 'a4');
+      var content = document.getElementById("content").innerHTML;
+      content = content.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "");
+      specialElementHandlers = {
+        '#bypassme': function (element, renderer) {
+          return true
+        }
+      };
+      margins = {
+        top: 40,
+        bottom: 40,
+        left: 40,
+        width: 522
+      };
+      pdf.fromHTML(
+        content,
+        margins.left,
+        margins.top, {
+          'width': margins.width,
+          'elementHandlers': specialElementHandlers
+        },
+
+        function (dispose) {
+          pdf.save('webpage.pdf');
+        }, margins);
+    });
+  
 
 	</script>
 {{/content}}
