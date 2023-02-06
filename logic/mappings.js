@@ -377,24 +377,24 @@ var categories = {
     ],
   },
 
-  "error-checking": {
-    title: "Error Checking Test",
-    logo: "Error Checking",
+  "situational-judgement": {
+    title: "Situational Judgement Test",
+    logo: "Situational Judgement",
     scorecard: "/images/NR_test.pdf",
     description:
-      "Error checking test access the ability to diagnose the presence or absence of a error and condition in a system or device.",
-    commentsSlug: "error-checking",
-    sublink: "ec-test",
+      "Situational Judgemen test evaluate a candidate's decision-making skills in realistic and hypothetical scenarios.",
+    commentsSlug: "situational-judgement",
+    sublink: "sj-test",
     list: [
       {
-        slug: "ec-test",
-        title: "Error Checking Test",
+        slug: "sj-test",
+        title: "Situational Judgement Test",
         description:
           "Practice for Splunk SOAR Certified Automation Developer Certification Exam with this 100% Free Splunk SOAR Certified Automation Developer Exam dumps. It contains free real exam questions from the actual Splunk SOAR Certified Automation Developer Exam tests.",
         sheetId: "1yO_PrMcx5FwlCwYmkh02utgya9fz-h5k7h-zPN_6VsA",
         gId: "2072618751",
         baseGId: "0",
-        commentsSlug: "ec-test",
+        commentsSlug: "sj-test",
         metadata: {
 
           info1:"A numerical reasoning test is a type of aptitude test that is designed to measure an individual's ability to understand and work with numerical information, such as mathematical concepts and calculations. These tests are often used as part of the recruitment process for jobs that require strong mathematical skills and the ability to work with numerical data, such as in fields like finance, accounting, and engineering.",
@@ -410,8 +410,8 @@ var categories = {
             "This numerical reasoning test really helped me understand my strengths and weaknesses in terms of numerical reasoning.",
             "I am pleasantly surprised by how well-structured the test was. The questions were quite challenging but not impossible,"],
           whyCertification: [
-            "Using our free numerical reasoning test can help you gain a better understanding of your numerical reasoning skills and identify areas where you may need to improve. Taking test can help you feel more confident and prepared if you need to take one as part of a job application or other assessment.",
-            "Our free test can also help you identify your strengths and weaknesses in numerical reasoning, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
+            "Using our Error checking tests benefit candidates by preparing them for real-world scenarios and by demonstrating their understanding in error detection. The test helps the candidate to enhance their ability to identify and fix errors, and enhance their attention to detail and problem-solving skills.",
+            "Our free test can also help you identify your strengths and weaknesses in error checking skills, which can help you focus your study and preparation efforts if you plan to take a more formal test in the future.",
           ],
           format1:"Numerical reasoning tests are a type of assessment that are designed to measure an individual's ability to understand and interpret numerical data. These tests typically consist of a set of multiple-choice questions that involve mathematical concepts such as arithmetic and basic statistics.",
           format2:"The format of these tests can vary depending on the company or organization administering the test. These tests are usually used as a part of the recruitment process for jobs that require strong numerical skills, such as finance, accounting, engineering, and data analysis.",

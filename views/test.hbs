@@ -1,11 +1,11 @@
 {{#content "body"}}
 
-<div class="mx-auto mt-8 max-w-5xl">
+<div class="mx-auto mt-2 max-w-5xl">
   {{!-- Timer --}}
-  <div class="timer flex justify-between ml-9 mr-9 mb-6 px-6 bg-gray-100 py-4 rounded-lg shadow-sm shadow-gray-300">
-    <h3 class="text-2xl font-bold text-gray-800 mt-1">{{certData.title}}</h3>
-    <div class=" px-4 py-2 font-semibold shadow-md rounded-md timer__display bg-gray-800 text-white">
-      <span>Time left </span>
+  <div class="timer md:flex justify-between ml-9 mr-9 mb-6 bg-white py-2 rounded-sm shadow-gray-300">
+    <h3 class="text-lg md:text-3xl font-bold tracking-wide text-blue-500 mt-1 text-center md:text-left">{{certData.title}}</h3>
+    <div class="text-center md:text-left px-4 py-2 shadow-sm shadow-gray-300 font-semibold text-md tracking-wider rounded-sm timer__display bg-white text-gray-900">
+      <span> Time left </span>
       <span class="timer__minutes">30</span>:<span class="timer__seconds">00</span> min
     </div>
     <div class="total_time hidden">
@@ -54,11 +54,31 @@
   <button class="text-lg submit-btn px-4 py-2 rounded-md font-bold mt-6 bg-blue-500 text-white">Submit Test</button>
 </div>
 
-<div class="hidden correctAnswers"></div>
-<div class="hidden totalquestion"></div>
-<div class="hidden answered"></div>
-<div class="hidden unanswered"></div>
-<div class="border-b-2 border-gray-200"></div>
+<div class="mt-6 w-full flex justify-center pb-4">
+  <dl class="grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-4 px-4">
+    <div class="border-t-2 border-gray-200 pt-2 correctAnswers hidden">
+      <dt class="text-base font-medium text-gray-800">Your score:</dt>
+      <dd class="text-xl md:text-xl font-bold tracking-tight text-blue-500 adata hidden"></dd>
+    </div>
+
+    <div class="border-t-2 border-gray-200 pt-2 totalquestion hidden">
+      <dt class="text-base font-medium text-gray-800">Total no. of questions:</dt>
+      <dd class="text-xl md:text-xl font-bold tracking-tight text-blue-500 bdata hidden"></dd>
+    </div>
+
+    <div class="border-t-2 border-gray-200 pt-2 answered hidden">
+      <dt class="text-base font-medium text-gray-800">Answered questions:</dt>
+      <dd class="text-xl md:text-xl font-bold tracking-tight text-blue-500 cdata hidden"></dd>
+    </div>
+
+    <div class="border-t-2 border-gray-200 pt-2 unanswered hidden">
+      <dt class="text-base font-medium text-gray-800">Unanswered questions:</dt>
+      <dd class="text-xl md:text-xl font-bold tracking-tight text-blue-500 ddata hidden"></dd>
+    </div>
+  </dl>
+</div>
+
+<div class="border-b-2 pt-6 border-gray-200"></div>
 {{!-- When I click on the Submit button above, the submitted answers in the test-data.hbs file is evaluated and appropriate javascript code is run to display correct answers / total answers --}}
 
 	<script>
@@ -115,20 +135,28 @@
       }
 
       const correctAnswersBox = document.querySelector('.correctAnswers');
-      correctAnswersBox.innerText = `Your score: ${count}/${total}`;
+      const a = document.querySelector('.adata');
+      a.innerText = `${count}/${total}`;
       correctAnswersBox.classList.remove('hidden');
+      a.classList.remove('hidden');
 
       const totalAnswersBox = document.querySelector('.totalquestion');
-      totalAnswersBox.innerText = `Total number of questions: ${total}`;
+      const b = document.querySelector('.bdata');
+      b.innerText = `${total}`;
       totalAnswersBox.classList.remove('hidden')
+      b.classList.remove('hidden');
 
       const AnsweredBox = document.querySelector('.answered');
-      AnsweredBox.innerText = `Number of answered questions: ${total-noans}`;
+      const c = document.querySelector('.cdata');
+      c.innerText = `${total-noans}`;
       AnsweredBox.classList.remove('hidden')
+      c.classList.remove('hidden');
 
       const unansweredBox = document.querySelector('.unanswered');
-      unansweredBox.innerText = `Number of unanswered questions: ${noans}`;
+      const d = document.querySelector('.ddata');
+      d.innerText = `${noans}`;
       unansweredBox.classList.remove('hidden')
+      d.classList.remove('hidden');
     }
 
     // update timer every second
