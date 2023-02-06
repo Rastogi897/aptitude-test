@@ -2,7 +2,7 @@
 		{{#each questions}}
 			<div class="iquestion iquestion{{@index}}">
 				<div class="bg-red-300"></div>
-				<h3 class="text-xl font-bold mb-2">{{name}}</h3>
+				<h3 class="text-lg font-bold tracking-wide mb-2">{{name}}</h3>
 				{{#each question}}
 					{{#startsWith "https://" this}}
 						<img src="{{this}}" />
