@@ -11,13 +11,16 @@
    <link rel="canonical" href="{{#if canonicalUrl}}{{canonicalUrl}}{{else}}{{originalUrl}}{{/if}}" />
    {{#block "metaNew"}}
    {{/block}}
-   
-   {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+
+   {{!--
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha256-c9vxcXyAG4paArQG3xk6DjyW/9aHxai2ef9RpMWO44A=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha256-c9vxcXyAG4paArQG3xk6DjyW/9aHxai2ef9RpMWO44A=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 
    <script type="application/ld+json">
       {
@@ -56,7 +59,8 @@
    <link rel="shortcut icon"
       href="https://res.cloudinary.com/adaface/image/upload/f_auto,q_auto/free-certification-dumps-logo.png">
    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
-   {{!-- <link rel="stylesheet" href="/stylesheets/dropdown.css"> --}}
+   {{!--
+   <link rel="stylesheet" href="/stylesheets/dropdown.css"> --}}
 
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" as="style"
@@ -103,151 +107,125 @@
          <div class="px-6 py-6 lg:px-8 noheader bg-white">
             <div>
                <nav class="flex h-9 items-center justify-between" aria-label="Global">
-                  <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+                  <div class="flex items-center justify-between w-full lg:min-w-0 lg:flex-1" aria-label="Global">
                      <a href="/" class="-m-1.5 p-1.5">
                         <span class="sr-only">Free Aptitude Tests</span>
-                        <img class="h-6 sm:h-8 md:pl-12"
-                           {{!-- src="/images/logo.png" --}}
+                        <img class="h-6 sm:h-8 md:pl-12" {{!-- src="/images/logo.png" --}}
                            src="https://res.cloudinary.com/adaface/image/upload/f_auto,q_auto/free-certification-dumps-logo.png"
                            alt="">
                      </a>
-                     <div class="relative text-left ml-6 mt-1 hidden md:block font-medium">
-                        <a href="/#test" class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">All Tests</a>
-                        <a href="#feature" class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">Features</a>
-                        <a href="#testimonial" class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">Testimonials</a>
-                     </div>
-                  </div>
-                  
 
-               <div class="relative inline-block text-left md:mx-2">
-                  <div>
-                     <button type="button"
-                        class="inline-flex w-full justify-center px-6 sm:px-12 py-2 mt-1 text-gray-800 text-sm sm:text-md md:text-base font-medium tracking-wide duration-200 hover:bg-gray-50 rounded-lg"
-                        id="menu-button" aria-expanded="true" aria-haspopup="true">
-                        Aptitude Tests
-                        <!-- Heroicon name: mini/chevron-down -->
-                        {{!-- <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                           fill="currentColor" aria-hidden="true">
-                           <path fill-rule="evenodd"
-                              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                              clip-rule="evenodd" />
-                        </svg> --}}
-                     </button>
-                  </div>
-
-                  {{!-- DROPDOWN MENU --}}
-                  
-                  <div id="dropdown" style="display:none"
-                     class="z-20 absolute right-0 mt-2 w-52 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                     role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                     <div class="py-2" role="none">
-                        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                        <div class="flex items-start justify-center rounded hover:bg-gray-50">
-                           {{!-- <div class="flex p-2 m-2 items-center justify-center flex-shrink-0 w-8 h-8 text-white rounded bg-blue-500 sm:h-10 sm:w-10">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                              <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd" />
-                              </svg>
-                           </div> --}}
-
-                           <a href="/verbal-reasoning"
-                              class="text-gray-900 px-4 py-2 text-md my-auto" role="menuitem" tabindex="-1"
-                              id="menu-item-0">Verbal Reasoning</a>
-                        </div>
-                        
-                        <div class="flex items-start justify-center rounded hover:bg-gray-50">
-                           {{!-- <div class="flex p-2 m-2 items-center justify-center flex-shrink-0 w-8 h-8 text-white rounded bg-blue-500 sm:h-10 sm:w-10">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                              <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
-                              <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
-                              <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
-                              </svg>
-                           </div> --}}
-                                 <a href="/spatial-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto" role="menuitem" tabindex="-1" id="menu-item-1">Spatial Reasoning</a>
-                        </div>
-
-                        
-                        <div class="flex items-start justify-center rounded hover:bg-gray-50">
-                           {{!-- <div class="flex p-2 m-2 items-center justify-center flex-shrink-0 w-8 h-8 text-white rounded bg-blue-500 sm:h-10 sm:w-10">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                              <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
-                              </svg>
-                           </div> --}}
-                                 <a href="/logical-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto" role="menuitem" tabindex="-1" id="menu-item-2">Logical Reasoning</a>
-                        </div>
-
-
-                        <div class="flex items-start justify-center rounded hover:bg-gray-50">
-                           {{!-- <div class="flex p-2 m-2 items-center justify-center flex-shrink-0 w-8 h-8 text-white rounded bg-blue-500 sm:h-10 sm:w-10">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
-                              </svg>
-                           </div> --}}
-                              <a href="/abstract-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto" role="menuitem" tabindex="-1" id="menu-item-3">Abstract Reasoning</a>
-                        </div>
-
-
-                        <div class="flex items-start justify-center rounded hover:bg-gray-50">
-                           {{!-- <div class="flex p-2 m-2 items-center justify-center flex-shrink-0 w-8 h-8 text-white rounded bg-blue-500 sm:h-10 sm:w-10">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
-                              </svg>
-                           </div> --}}
-                              <a href="/numerical-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto" role="menuitem" tabindex="-1"
-                              id="menu-item-4">Numerical Reasonng</a>
-                        </div>
-
-                     </div>
-                  </div>
-               </div>
-
-               <!-- Mobile menu, show/hide based on menu open state. -->
-               {{!-- <div role="dialog" aria-modal="true" id="mobileMenu" class="hidden">
-                  <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
-                     <div class="flex h-9 items-center justify-between">
-                        <div class="flex">
-                           <a href="#" class="-m-1.5 p-1.5">
-                              <span class="sr-only">Free certification dumps</span>
-                              <img class="h-8"
-                                 src="https://res.cloudinary.com/adaface/image/upload/f_auto,q_auto/free-certification-dumps-logo.png"
-                                 alt="">
-                           </a>
-                        </div>
-                        <div class="flex">
-                           <button type="button" id="closeMobileMenu"
-                              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                              <span class="sr-only">Close menu</span>
-                              <!-- Heroicon name: outline/x-mark -->
-                              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                              </svg>
+                     <div
+                        class="relative inline-block text-left md:mx-2 md:flex md:justify-between md:items-center md:flex-1">
+                        <div>
+                           <button type="button"
+                              class="relative inline-flex justify-center px-6 sm:px-12 py-2 mt-1 text-gray-800 text-sm sm:text-md md:text-base font-medium tracking-wide duration-200 hover:bg-gray-50 rounded-lg"
+                              id="menu-button" aria-expanded="true" aria-haspopup="true">
+                              Aptitude Tests
                            </button>
+
+                           <div id="dropdown"
+                              class="hidden absolute top-12 right-0 md:left-0 md:right-auto min-w-[190px] md:min-w-[200px] z-20 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                              role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                              <div class="py-2" role="none">
+                                 <div class="flex items-start justify-center rounded hover:bg-gray-50">
+
+                                    <a href="/verbal-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto"
+                                       role="menuitem" tabindex="-1" id="menu-item-0">Verbal Reasoning</a>
+                                 </div>
+
+                                 <div class="flex items-start justify-center rounded hover:bg-gray-50">
+                                    <a href="/spatial-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto"
+                                       role="menuitem" tabindex="-1" id="menu-item-1">Spatial Reasoning</a>
+                                 </div>
+
+
+                                 <div class="flex items-start justify-center rounded hover:bg-gray-50">
+                                    <a href="/logical-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto"
+                                       role="menuitem" tabindex="-1" id="menu-item-2">Logical Reasoning</a>
+                                 </div>
+
+
+                                 <div class="flex items-start justify-center rounded hover:bg-gray-50">
+                                    <a href="/abstract-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto"
+                                       role="menuitem" tabindex="-1" id="menu-item-3">Abstract Reasoning</a>
+                                 </div>
+
+
+                                 <div class="flex items-start justify-center rounded hover:bg-gray-50">
+                                    <a href="/numerical-reasoning" class="text-gray-900 px-4 py-2 text-md my-auto"
+                                       role="menuitem" tabindex="-1" id="menu-item-4">Numerical Reasonng</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="relative text-left ml-6 mt-1 hidden md:block font-medium">
+                           <a href="/#test"
+                              class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">All
+                              Tests</a>
+                           <a href="#feature"
+                              class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">Features</a>
+                           <a href="#testimonial"
+                              class="mt-2 px-6 py-2 text-gray-900 duration-200 hover:bg-gray-50 rounded-lg">Testimonials</a>
                         </div>
                      </div>
-                     <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                           <div class="space-y-2 py-6">
-                              <a href="/exam/amazon"
-                                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">AWS</a>
 
-                              <a href="/exam/microsoft"
-                                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Azure</a>
 
-                              <a href="/exam/splunk"
-                                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Splunk</a>
 
-                              <a href="/exam/tableau"
-                                 class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Tableau</a>
-                           </div>
-                           <div class="py-6">
-                              <a href="#"
-                                 class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log
-                                 in</a>
-                           </div>
-                        </div>
-                     </div>
+                     {{!-- DROPDOWN MENU --}}
+
+
                   </div>
-               </div> --}}
+
+                  <!-- Mobile menu, show/hide based on menu open state. -->
+                  {{!-- <div role="dialog" aria-modal="true" id="mobileMenu" class="hidden">
+                     <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+                        <div class="flex h-9 items-center justify-between">
+                           <div class="flex">
+                              <a href="#" class="-m-1.5 p-1.5">
+                                 <span class="sr-only">Free certification dumps</span>
+                                 <img class="h-8"
+                                    src="https://res.cloudinary.com/adaface/image/upload/f_auto,q_auto/free-certification-dumps-logo.png"
+                                    alt="">
+                              </a>
+                           </div>
+                           <div class="flex">
+                              <button type="button" id="closeMobileMenu"
+                                 class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                 <span class="sr-only">Close menu</span>
+                                 <!-- Heroicon name: outline/x-mark -->
+                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                 </svg>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="mt-6 flow-root">
+                           <div class="-my-6 divide-y divide-gray-500/10">
+                              <div class="space-y-2 py-6">
+                                 <a href="/exam/amazon"
+                                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">AWS</a>
+
+                                 <a href="/exam/microsoft"
+                                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Azure</a>
+
+                                 <a href="/exam/splunk"
+                                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Splunk</a>
+
+                                 <a href="/exam/tableau"
+                                    class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Tableau</a>
+                              </div>
+                              <div class="py-6">
+                                 <a href="#"
+                                    class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log
+                                    in</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> --}}
             </div>
          </div>
          <main id="content1">
@@ -261,13 +239,13 @@
                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                   <div class="space-y-8 xl:col-span-1">
                      <a href="/">
-                     <img class="h-6 sm:h-8"
-                           {{!-- src="/images/logo.png" --}}
+                        <img class="h-6 sm:h-8" {{!-- src="/images/logo.png" --}}
                            src="https://res.cloudinary.com/adaface/image/upload/f_auto,q_auto/free-certification-dumps-logo.png"
                            alt="">
                      </a>
-                     <p class="text-base text-gray-800">Widely accessible and FREE source for all employment based aptitude exam
-                        </p>
+                     <p class="text-base text-gray-800">Widely accessible and FREE source for all employment based
+                        aptitude exam
+                     </p>
 
                   </div>
                   <div class="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -276,23 +254,30 @@
                            <h3 class="text-base font-medium text-gray-900">Popular Aptitude Tests</h3>
                            <ul role="list" class="mt-4 space-y-4">
                               <li>
-                                 <a href="/verbal-reasoning" class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Verbal Reasoning</a>
+                                 <a href="/verbal-reasoning"
+                                    class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Verbal Reasoning</a>
                               </li>
 
                               <li>
-                                 <a href="/spatial-reasoning" class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Spatial Reasoning</a>
+                                 <a href="/spatial-reasoning"
+                                    class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Spatial Reasoning</a>
                               </li>
 
                               <li>
-                                 <a href="/logical-reasoning" class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Logical Reasoning</a>
+                                 <a href="/logical-reasoning"
+                                    class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Logical Reasoning</a>
                               </li>
 
                               <li>
-                                 <a href="/abstract-reasoning" class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Abstract Reasoning</a>
+                                 <a href="/abstract-reasoning"
+                                    class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Abstract
+                                    Reasoning</a>
                               </li>
 
                               <li>
-                                 <a href="/numerical-reasoning" class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Numerical Reasoning</a>
+                                 <a href="/numerical-reasoning"
+                                    class="text-sm sm:text-base text-gray-700 hover:text-gray-600">Numerical
+                                    Reasoning</a>
                               </li>
                            </ul>
                         </div>
@@ -373,12 +358,12 @@
    </script>
 
    {{!-- dropdown toggle --}}
-   <script src="/js/dropdown.js">{!}</script>
+   <script src="/js/dropdown.js">{ !}</script>
 
    {{!-- Overrideable block --}}
    {{#block "eob-block"}}
    {{/block}}
-   
+
    <script>
       $("#openMobileMenu").click(function () {
          $("#mobileMenu").addClass("block");
@@ -393,4 +378,3 @@
 </body>
 
 </html>
-
