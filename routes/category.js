@@ -59,6 +59,9 @@ const certRender = (category, cert) => async (req, res) => {
 const testRender = (category) => async (req, res) => {
     console.log("testRender", category);
     var catData = categories[category];
+    let time = req.query.time ? req.query.time : 30;
+    const numOfQuestions = req.query.questions ? req.query.questions : 20;
+
     if (!catData) {
         res.status(404).send("Not found");
         return;
@@ -78,7 +81,7 @@ const testRender = (category) => async (req, res) => {
         category,
         cert,
         page: 1,
-        limit: 20,
+        limit: numOfQuestions,
         force,
     });
 
@@ -98,6 +101,7 @@ const testRender = (category) => async (req, res) => {
         catData,
         certData,
         questions,
+        time,
         correctAnswers
     }
 )};

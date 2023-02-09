@@ -3,13 +3,13 @@
 
 <div class="w-full px-6 pt-16 bg-white text-gray-900 pb-6 sm:pb-6">
   <div class="relative items-center -mx-6 lg:mt-6 xl:flex">
-    <div class="max-w-4xl px-6 mx-auto text-center">
+    <div class="max-w-4xl px-6 mx-auto sm:text-center">
       <h1 class="text-3xl leading-none sm:text-4xl md:text-6xl font-bold text-blue-500">{{catData.title}}</h1>
       
 
-      <p class="max-w-2xl mt-4 text-gray-600 leading-normal sm:text-lg text-primary-offset tracking-wide font-semibold">{{catData.description}}</p>
+      <p class="max-w-2xl mt-4 text-gray-600 leading-normal sm:text-lg text-primary-offset tracking-wide font-semibold mx-auto">{{catData.description}}</p>
       
-      <div class="flex mt-3 justify-center">
+      <div class="flex mt-3 sm:justify-center">
         {{!-- <a href="/{{catData.commentsSlug}}/online-test" class="focus:outline-none inline-flex items-center justify-center font-bold duration-200 text-button px-4 py-1 text-md mt-6 text-primary text-white hover:bg-gray-800 border-gray-800 bg-gray-800 rounded-full border-2">
           <span>Take free test</span>
         </a> --}}
@@ -23,7 +23,7 @@
         {{!-- modal content at the end--}}
 
 
-        <a href="/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="focus:outline-none inline-flex items-center justify-center font-bold duration-200 text-button px-4 py-1 text-md mt-6 text-primary text-blue-500 hover:bg-gray-50 border-gray-400 rounded-full border-2 mx-2">
+        <a href="/{{catData.commentsSlug}}/{{certData.slug}}/view/page/1" class="focus:outline-none inline-flex items-center justify-center font-bold duration-200 text-button px-4 py-1 text-md mt-6 text-primary text-blue-500 hover:border-gray-500 border-gray-400 rounded-full border-2 mx-2">
           <span>View All Questions
             {{!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -37,8 +37,8 @@
     </div>
   </div>
 
-  <div class="overflow-hidden bg-white pt-8">
-  <div class="relative mx-auto max-w-7xl pt-24 px-6 sm:pt-28 pb-6">
+  <div class="overflow-hidden bg-white pt-0 sm:pt-8">
+  <div class="relative mx-auto max-w-7xl pt-20 sm:px-6 sm:pt-28 sm:pb-6">
     <svg class="absolute top-0 left-full -translate-x-1/2 -translate-y-3/4 transform lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
       <defs>
         <pattern id="8b1b5f72-e944-4457-af67-0c6d15a99f38" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -49,14 +49,14 @@
     </svg>
     <div class="relative lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
       <div class="lg:col-span-1">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-700 sm:text-3xl">Upskill your career with free employment based aptitude tests.</h2>
+        <h2 class="text-xl font-bold tracking-tight text-gray-700 sm:text-3xl">Upskill your career with free employment based aptitude tests.</h2>
         <p class="text-md font-normal text-gray-700 pt-4">These tests offer a convenient, detailed, and data-driven way to identify areas for improvement and boost your career advancement.</p>
         <p></p>
       </div>
-      <ul>
+      <ul class="pt-8">
         <li class="text-body-color mb-4 flex text-base">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-8 w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -65,11 +65,11 @@
               ></path>
             </svg>
           </span>
-          <p  class="font-normal text-lg pb-4"><span class="">Timed tests</span> help assess a candidate's ability to perform under pressure and complete tasks within a specified time frame.</p>
+          <p  class="font-normal text-md sm:text-lg pb-4"><span class="">Timed tests</span> help assess a candidate's ability to perform under pressure and complete tasks within a specified time frame.</p>
         </li>
         <li class="text-body-color mb-4 flex text-base">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-8 w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -78,11 +78,11 @@
               ></path>
             </svg>
           </span>
-          <p class="font-normal text-lg pb-4">Detailed explanation for question provide a comprehensive understanding of the test results and areas for improvement to the user.</p>
+          <p class="font-normal text-md sm:text-lg pb-4">Detailed explanation for question provide a comprehensive understanding of the test results and areas for improvement to the user.</p>
         </li>
         <li class="text-body-color mb-4 flex text-base">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-8 w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -91,7 +91,7 @@
               ></path>
             </svg>
           </span>
-          <p  class="text-lg font-normal pb-4">Question bank of more than 50+ quality questions covers all the major topic and provide a great opportunity to upskill yourself</p>
+          <p  class="text-md sm:text-lg font-normal pb-4">Question bank of more than 50+ quality questions covers all the major topic and provide a great opportunity to upskill yourself</p>
         </li>
       </ul>
     </div>
@@ -181,7 +181,7 @@
 
 
 <div class="bg-gray-50">
-  <div class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto pb-8 sm:pb-24" id="feature">
+  <div class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto pb-4 sm:pb-24" id="feature">
     <div  id="why-should" class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
@@ -198,23 +198,23 @@
 
           <!-- Stats section -->
           <div class="mt-6">
-            <dl class="grid grid-cols-4 gap-x-4 gap-y-4">
-              <div class="border-t-2 border-gray-400 pt-8">
+            <dl class="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-4">
+              <div class="border-t-2 border-gray-400 pt-2 sm:pt-8">
                 <dt class="text-base font-medium text-gray-800">Price</dt>
                 <dd class="text-xl md:text-3xl font-semibold tracking-tight text-blue-500">0$</dd>
               </div>
 
-              <div class="border-t-2 border-gray-400 pt-8">
+              <div class="border-t-2 border-gray-400 pt-2 sm:pt-8">
                 <dt class="text-base font-medium text-gray-800">Questions</dt>
                 <dd class="text-xl md:text-3xl font-semibold tracking-tight text-blue-500">50+</dd>
               </div>
 
-              <div class="border-t-2 border-gray-400 pt-8">
+              <div class="border-t-2 border-gray-400 pt-2 sm:pt-8">
                 <dt class="text-base font-medium text-gray-800">Quality</dt>
                 <dd class="text-xl md:text-3xl font-semibold tracking-tight text-blue-500">99.9%</dd>
               </div>
 
-              <div class="border-t-2 border-gray-400 pt-8">
+              <div class="border-t-2 border-gray-400 pt-2 sm:pt-8">
                 <dt class="text-base font-medium text-gray-800">Students</dt>
                 <dd class="text-xl md:text-3xl font-semibold tracking-tight text-blue-500">10K+</dd>
               </div>
@@ -239,7 +239,7 @@
 
 
 <div class="bg-white">
-  <div id="the-format" class="w-full max-w-screen-xl px-6 sm:px-8 py-12 sm:py-20 mx-auto">
+  <div id="the-format" class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto">
     <div class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6">
@@ -270,7 +270,7 @@
 
 
 <div class="bg-gray-50">
-  <div id="score" class="w-full max-w-screen-xl px-6 sm:px-8 py-12 sm:py-20 mx-auto">
+  <div id="score" class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto">
     <div class="-mx-6">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
@@ -327,7 +327,7 @@
 <section class="bg-white">
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:pt-24 lg:px-8" id="testimonial">
     <div id="review" class="mx-auto max-w-xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight sm:text-5xl">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-5xl">
         Read <strong class="font-bold text-blue-500">trusted reviews</strong> from our customers
       </h2>
     </div>
@@ -336,16 +336,14 @@
     </div>
 
     <div
-      class="mb-14 mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-16 lg:grid-cols-3">
+      class="mb-14 mt-8 sm:mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-16 lg:grid-cols-3">
       <div class=" rounded-md bg-white">
-        <blockquote
-          class=" flex flex-col justify-between rounded-lg p-12 pt-6 text-center shadow-lg"
-        >
+        <blockquote class=" flex flex-col justify-between rounded-lg p-8 sm:p-12 pt-6 text-center shadow-lg">
           <p class="text-lg font-bold text-gray-900">John Smith</p>
           <p class="mt-1 text-sm font-medium text-gray-800">
             HR Manager, Acme Inc.
           </p>
-          <p class="mt-4 text-sm sm:text-md text-gray-700">
+          <p class="mt-4 text-md text-gray-700">
             {{certData.metadata.testimonial.[0]}}
           </p>
 
@@ -406,13 +404,13 @@
 
       <div class=" rounded-md bg-white">
         <blockquote
-          class="flex flex-col justify-between rounded-lg p-12  pt-6 text-center shadow-lg"
+          class="flex flex-col justify-between rounded-lg p-8 sm:p-12 pt-6 text-center shadow-lg"
         >
           <p class="text-lg font-bold text-gray-900">James Garcia</p>
           <p class="mt-1 text-sm font-medium text-gray-800">
             IT Engineer, DigitalWorks
           </p>
-          <p class="mt-4 text-sm sm:text-md text-gray-700">
+          <p class="mt-4 text-md text-gray-700">
             {{certData.metadata.testimonial.[1]}}
           </p>
 
@@ -473,13 +471,13 @@
 
       <div class=" rounded-md bg-white">
         <blockquote
-          class="flex flex-col justify-between rounded-lg p-12 pt-6 text-center shadow-lg"
+          class="flex flex-col justify-between rounded-lg p-8 sm:p-12 pt-6 text-center shadow-lg"
         >
           <p class="text-lg font-bold text-gray-900">William Robinson</p>
           <p class="mt-1 text-sm font-medium text-gray-800">
             Accounts Manager, SoftPro
           </p>
-          <p class="mt-4 text-sm sm:text-md text-gray-700">
+          <p class="mt-4 text-md text-gray-700">
             {{certData.metadata.testimonial.[2]}}
           </p>
 
@@ -544,10 +542,10 @@
 
 
 <section class="overflow-hidden bg-blue-500">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative py-24" id="test">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative py-14 sm:py-24" id="test">
     <div class="mx-auto max-w-lg text-center">
       <h2 class="font-bold text-3xl tracking-tight text-white sm:text-4xl">Experience & Enhance</h2>
-      <p class="mt-4 text-lg text-gray-100">Just don't take our words for it. It's your time to boost your aptitude knowledge. Start practicing and upskill your job with our free employement aptitude tests.</p>
+      <p class="mt-4 text-base sm:text-lg text-gray-100">Just don't take our words for it. It's your time to boost your aptitude knowledge. Start practicing and upskill your job with our free employement aptitude tests.</p>
 
 
       <div class="flex space-x-4 mt-3 justify-center">
@@ -578,19 +576,66 @@
                 <!--header-->
                 <div class="flex py-4 px-6 border-b border-solid border-gray-200 rounded-t">
                   <h3 class="text-2xl font-semibold">
-                    Test Instructions
+                    {{catData.title}}
                   </h3>
                 </div>
                 <!--body-->
-                <div class="py-4 px-6">
+                <div class="py-4 px-4 sm:px-6">
                   <div>
-                    <ul class="list-none text-lg font-normal">
-                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg> The test contains 20 MCQ based questions. </li>
-                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg> The time limit for the test is 30 minutes. </li>
-                      
-                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg> Do not refresh the page before completion of the test. </li>
-                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg> Press the submit button to check the score and correct answers. </li>
+                    <ul class="list-none text-base sm:text-lg font-normal">
+                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>The test contains MCQ based questions. </li>    
+                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Do not refresh the page before completion of the test. </li>
+                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Press the submit button to check the score and correct answers. </li>
+                      <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>Set the time and total number of questions in the test</li>
                     </ul>
+                  </div>
+
+                  <div class="md:flex justify-evenly pt-2">
+                    <div class="w-full mx-2 my-4">
+                      <select class="time form-select appearance-none
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-semibold
+                        text-gray-700
+                        bg-white bg-clip-padding bg-no-repeat
+                        border border-solid border-gray-500
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                          {{!-- <option selected>Select Time</option> --}}
+                          <option class="bg-black hover:bg-gray-400" value="10">10 minutes</option>
+                          <option value="20">20 minutes</option>
+                          <option value="30" selected>30 minutes</option>
+                          <option value="40">40 minutes</option>
+                      </select>
+                    </div>
+                    <div class="w-full mx-2 my-4">
+                      <select class="ques form-select appearance-none
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-semibold
+                        text-gray-700
+                        bg-white bg-clip-padding bg-no-repeat
+                        border border-solid border-gray-500
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                          <option value="5">5 Questions</option>
+                          <option value="10">10 Questions</option>
+                          <option value="20" selected>20 Questions</option>
+                          <option value="30">30 Questions</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <!--footer-->
@@ -598,7 +643,7 @@
                   <button class="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
                     Close
                   </button>
-                  <a class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-2 shadow-sm hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 rounded-full" type="button" onclick="toggleModal('modal-id')" href="/{{catData.commentsSlug}}/online-test">
+                  <a class="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-2 shadow-sm hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 rounded-full start-test cursor-pointer" type="button" onclick="toggleModal('modal-id')">
                     Start Test
                   </a>
                 </div>
@@ -618,6 +663,12 @@
     document.getElementById(modalID).classList.toggle("flex");
     document.getElementById(modalID + "-backdrop").classList.toggle("flex");
   }
+
+  document.querySelector(".start-test").addEventListener("click", function() {
+    const selectedTime = document.querySelector(".time").value;
+    const numOfQuestions = document.querySelector(".ques").value;
+    window.location.href = `/{{catData.commentsSlug}}/online-test/?time=${selectedTime}&questions=${numOfQuestions}`;
+  });
 </script>
 
 

@@ -75,7 +75,7 @@
 					{{!-- <a href="" class="inline-flex items-center rounded border border-transparent bg-indigo-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">View Discussion</a> --}}
 				</div>
 				<div id="num" class="iquestion-ans hidden">{{#each correctAnswer}}{{this}}:{{/each}}</div>
-				<div class="mt-6 hidden iquestion-answer">
+				<div class="mt-6 hidden iquestion-answer bg-gray-50 p-2 font-semibold text-gray-800 text-md">
 					Correct Answer: {{#each correctAnswer}}
 						{{#gt @index 0}},{{/gt}}
 						{{#eq this '1'}}A{{/eq}}

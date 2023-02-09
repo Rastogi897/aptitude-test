@@ -2,11 +2,14 @@
 
 <div class="mx-auto mt-2 max-w-5xl">
   {{!-- Timer --}}
-  <div class="timer md:flex justify-between ml-9 mr-9 mb-6 bg-white py-2 rounded-sm shadow-gray-300">
+  <div class="timer md:flex justify-between ml-9 mr-9 mb-6 bg-white py-2 sticky top-0 z-10 rounded-md px-2">
     <h3 class="text-lg md:text-3xl font-bold tracking-wide text-blue-500 mt-1 text-center md:text-left">{{certData.title}}</h3>
-    <div class="text-center md:text-left px-4 py-2 shadow-sm shadow-gray-300 font-semibold text-md tracking-wider rounded-sm timer__display bg-white text-gray-900">
-      <span> Time left </span>
-      <span class="timer__minutes">30</span>:<span class="timer__seconds">00</span> min
+    <div class="flex justify-center">
+    <div class="text-center px-4 py-1 mt-1 border-2 border-blue-500 font-semibold text-md tracking-wider rounded-full timer__display bg-white text-gray-900">
+      <span> Time left : </span>
+      <span class="timer__minutes">{{time}}</span>:<span class="timer__seconds">00</span> min
+    </div>
+    <a href="/" class="text-center px-4 py-1 mt-1 border-2 border-gray-800 ml-2 font-semibold text-md tracking-wider rounded-full timer__display bg-gray-800 text-gray-50">Exit Test</a>
     </div>
     <div class="total_time hidden">
       Total Time: <span class="total_in_min">00</span> min
@@ -18,12 +21,12 @@
 
   {{!-- HTML Modal, initially hidden --}}
   <div class="modal flex flex-col justify-center bg-black/40 items-center p-4 fixed top-0 bottom-0 left-0 right-0 hidden">
-    <div class="modal__content w-1/2 flex flex-col items-center justify-center bg-white text-black p-4">
-      <div class="modal__text">
-        Your Time is over. Click OK to evaluate your score.
+    <div class="modal__content w-1/2 flex flex-col items-center justify-center bg-white text-black p-4 rounded-md">
+      <div class="modal__text text-lg font-semibold">
+        Your Time is over. Click submit to evaluate your score.
       </div>
       {{!-- <div class="modal__button flex justify-center mt-3 "> --}}
-        <button class="modal__button__ok inline-block bg-blue-600 text-white mt-3 px-2 py-1">OK</button>
+        <button class="modal__button__ok inline-block bg-blue-600 text-white mt-3 px-4 py-1 rounded-full font-semibold">Submit</button>
       {{!-- </div> --}}
     </div>
   </div>
@@ -83,6 +86,7 @@
 
 	<script>
     var q = {{{JSONstringify questions}}};
+    var time_in_min = {{{JSONstringify time}}}
     
     // function to evaluate answers
     function evaluateAnswers() {
@@ -164,7 +168,7 @@
     let minutes = timer.querySelector('.timer__minutes');
     let seconds = timer.querySelector('.timer__seconds');
     let totalTime = timer.querySelector('.total_in_min');
-    let time = 30 * 60;
+    let time = time_in_min * 60;
     totalTime.innerText = Math.floor(time / 60);
     let interval  = setInterval(function() {
       time--;
