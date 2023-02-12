@@ -16,7 +16,7 @@
 
         {{!-- modeal button --}}
 
-        <button class="inline-flex items-center justify-center font-bold duration-200 text-button px-4 py-1 text-md mt-6 text-primary text-white hover:bg-gray-800 border-gray-800 bg-gray-800 rounded-full ease-linear transition-all" type="button" onclick="toggleModal('modal-id')">
+        <button class="inline-flex items-center justify-center font-semibold duration-200 text-button px-4 py-1 text-md mt-6 text-primary text-white hover:bg-gray-900 border-gray-800 bg-gray-800 rounded-full ease-linear transition-all" type="button" onclick="toggleModal('modal-id')">
           Take free test
         </button>
 
@@ -40,12 +40,11 @@
 
 {{!-- type of tests --}}
 
-  <div class="w-full max-w-screen-xl mx-auto bg-white">
-  <div class="py-4 sm:py-12 mt-6 lg:mt-12 md:grid md:grid-cols-2 lg:grid-cols-4 md:px-12 lg:px-6 xl:px-8">
-    <div class="mx-2">
-      <a href="/{{catData.commentsSlug}}/online-test/10-mins">
-      <div class="flex flex-col bg-white rounded-md shadow-sm mb-6 py-5 px-4 duration-150 w-full hover:border-gray-500 border border-gray-400">
-        <div>
+  <div class="max-w-screen-xl mx-auto bg-white">
+  <div class="py-4 sm:py-12 mt-6 lg:mt-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:px-12 lg:px-6 xl:px-8">
+    <div class="mx-2"> 
+      <div class="bg-white rounded-md shadow-sm mb-6 py-5 px-4 duration-150 hover:border-gray-500 border border-gray-400">
+        <div class="mb-4 md:mb-6">
           <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Begineer Level Test</h4>
           <div>
             <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
@@ -54,15 +53,15 @@
             </ul>
           </div>
         </div>
-        
+        <a href="/{{catData.commentsSlug}}/online-test/10-mins" class="px-4 py-1 rounded-full text-white inline text-md font-normal bg-gray-800 hover:bg-gray-900 duration-150">
+          Start test
+        </a>
       </div>
-      </a>
     </div>
 
     <div class="mx-2">
-      <a href="/{{catData.commentsSlug}}/online-test/20-mins">
-      <div class="hover:border-gray-500 w-full flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
-        <div>
+      <div class="hover:border-gray-500 w-full bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
+        <div class="mb-4 md:mb-6">
           <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Medium Level Test</h4>
           <div>
             <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
@@ -71,14 +70,16 @@
             </ul>
           </div>
         </div>
-        
+        <a href="/{{catData.commentsSlug}}/online-test/20-mins" class="px-4 py-1 rounded-full text-white inline text-md font-normal bg-gray-800 hover:bg-gray-900 duration-150">
+          Start test
+        </a>
       </div>
-      </a>
     </div>
+
+
     <div class="mx-2">
-      <a href="/{{catData.commentsSlug}}/online-test/30-mins">
-      <div class="hover:border-gray-500 w-full flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
-        <div>
+      <div class="hover:border-gray-500 w-full bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
+        <div class="mb-4 md:mb-6">
           <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Hard Level Test</h4>
           <div>
             <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
@@ -87,14 +88,15 @@
             </ul>
           </div>
         </div>
+        <a href="/{{catData.commentsSlug}}/online-test/30-mins" class="px-4 py-1 rounded-full text-white inline text-md font-normal bg-gray-800 hover:bg-gray-900 duration-150">
+          Start test
+        </a>
       </div>
-      </a>
     </div>
 
     <div class="mx-2">
-      <a href="/{{catData.commentsSlug}}/online-test/40-mins">
-      <div class="hover:border-gray-500 flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 w-full">
-        <div>
+      <div class="hover:border-gray-500 bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 w-full">
+        <div class="mb-4 md:mb-6"> 
           <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Expert Level Test</h4>
           <div>
             <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
@@ -103,9 +105,10 @@
             </ul>
           </div>
         </div>
-        
+        <a href="/{{catData.commentsSlug}}/online-test/40-mins" class="px-4 py-1 rounded-full text-white inline text-md font-normal bg-gray-800 hover:bg-gray-900 duration-150">
+          Start test
+        </a>
       </div>
-      </a>
     </div>
   </div>
 </div>
