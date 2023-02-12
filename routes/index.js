@@ -13,7 +13,7 @@ var {
     getSingleQuestionOfCert,
 } = require("../logic/mappings");
 
-const { certRender, testRender } = require("./category");
+const { certRender, testRender, testType } = require("./category");
 
 router.get(["/test-notion-page"], async (req, res) => {
     console.log("AAA");
@@ -82,6 +82,26 @@ router.get(["/"], (req, res) => {
 
 router.get("/:category/online-test", (req, res) => {
     testRender(req.params.category)(req, res);
+})
+
+router.get("/:category/online-test/10-mins", (req, res) => {
+    const x = 10;
+    testType(req.params.category, x)(req, res);
+})
+
+router.get("/:category/online-test/20-mins", (req, res) => {
+    const x = 20;
+    testType(req.params.category, x)(req, res);
+})
+
+router.get("/:category/online-test/30-mins", (req, res) => {
+    const x = 30;
+    testType(req.params.category, x)(req, res);
+})
+
+router.get("/:category/online-test/40-mins", (req, res) => {
+    const x = 40;
+    testType(req.params.category, x)(req, res);
 })
 
 router.get('/:category', (req, res) => {

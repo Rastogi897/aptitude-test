@@ -94,7 +94,57 @@ const testRender = (category) => async (req, res) => {
         return;
     }
 
-    let correctAnswers = new Array(20);
+    let correctAnswers = new Array(numOfQuestions);
+    correctAnswers.fill(0);
+
+    res.render("test", {
+        catData,
+        certData,
+        questions,
+        time,
+        correctAnswers
+    }
+)};
+
+
+const testType = (category, x) => async (req, res) => {
+    var catData = categories[category];
+    let time = x;
+    const numOfQuestions = x;
+
+    if (!catData) {
+        res.status(404).send("Not found");
+        return;
+    }
+
+    var cert = catData.list[0].slug;
+    var certData = catData.list.find((x) => x.slug === cert);
+    if (!certData) {
+        res.status(404).send("Not found");
+        return;
+    }
+
+    // check if the req query has nocache param
+    var force = !!req.query.nocache;
+
+    var { success, error, data } = await getQuestionsOfCert({
+        category,
+        cert,
+        page: 1,
+        limit: numOfQuestions,
+        force,
+    });
+
+    var { data: questions, total, limit } = data || {};
+
+    console.log("questions: ", questions)
+
+    if (!success) {
+        res.status(404).send(error);
+        return;
+    }
+
+    let correctAnswers = new Array(x);
     correctAnswers.fill(0);
 
     res.render("test", {
@@ -206,4 +256,5 @@ module.exports = {
     certRender: certRender,
     certQuestionRender: certQuestionRender,
     testRender: testRender,
+    testType: testType,
 };

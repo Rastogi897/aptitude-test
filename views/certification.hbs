@@ -1,8 +1,8 @@
 {{#content "body"}}
 
 
-<div class="w-full px-6 pt-16 bg-white text-gray-900 pb-6 sm:pb-6">
-  <div class="relative items-center -mx-6 lg:mt-6 xl:flex">
+<div class="w-full pt-16 bg-white text-gray-900 pb-6 sm:pb-6">
+  <div class="relative items-center lg:mt-6 xl:flex">
     <div class="max-w-4xl px-6 mx-auto sm:text-center">
       <h1 class="text-3xl leading-none sm:text-4xl md:text-6xl font-bold text-blue-500">{{catData.title}}</h1>
       
@@ -37,8 +37,83 @@
     </div>
   </div>
 
-  <div class="overflow-hidden bg-white pt-0 sm:pt-8">
-  <div class="relative mx-auto max-w-7xl pt-20 sm:px-6 sm:pt-28 sm:pb-6">
+
+{{!-- type of tests --}}
+
+  <div class="w-full max-w-screen-xl mx-auto bg-white">
+  <div class="py-4 sm:py-12 mt-6 lg:mt-12 md:grid md:grid-cols-2 lg:grid-cols-4 md:px-12 lg:px-6 xl:px-8">
+    <div class="mx-2">
+      <a href="/{{catData.commentsSlug}}/online-test/10-mins">
+      <div class="flex flex-col bg-white rounded-md shadow-sm mb-6 py-5 px-4 duration-150 w-full hover:border-gray-500 border border-gray-400">
+        <div>
+          <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Begineer Level Test</h4>
+          <div>
+            <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>10 MCQ Questions. </li>    
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>10 Minutes</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      </a>
+    </div>
+
+    <div class="mx-2">
+      <a href="/{{catData.commentsSlug}}/online-test/20-mins">
+      <div class="hover:border-gray-500 w-full flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
+        <div>
+          <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Medium Level Test</h4>
+          <div>
+            <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>20 MCQ Questions. </li>    
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>20 Minutes</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      </a>
+    </div>
+    <div class="mx-2">
+      <a href="/{{catData.commentsSlug}}/online-test/30-mins">
+      <div class="hover:border-gray-500 w-full flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 ">
+        <div>
+          <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Hard Level Test</h4>
+          <div>
+            <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>30 MCQ Questions. </li>    
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>30 Minutes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="mx-2">
+      <a href="/{{catData.commentsSlug}}/online-test/40-mins">
+      <div class="hover:border-gray-500 flex flex-col justify-between bg-white rounded-md shadow-sm border border-gray-400 mb-6 py-5 px-4 duration-150 w-full">
+        <div>
+          <h4 tabindex="0" class="focus:outline-none text-gray-800 font-semibold mb-1 sm:mb-3 text-lg">Expert Level Test</h4>
+          <div>
+            <ul class="list-none text-base sm:text-sm font-semibold text-gray-600 sm:tracking-wider">
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>40 MCQ Questions. </li>    
+              <li class="pt-1"><svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>40 Minutes</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+{{!-- another section --}}
+
+  {{!-- <div class="overflow-hidden bg-white pt-0">
+  <div class="relative mx-auto max-w-7xl pt-20 sm:px-6 sm:pt-12 sm:pb-6">
     <svg class="absolute top-0 left-full -translate-x-1/2 -translate-y-3/4 transform lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
       <defs>
         <pattern id="8b1b5f72-e944-4457-af67-0c6d15a99f38" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -47,16 +122,16 @@
       </defs>
       <rect width="404" height="784" fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)"></rect>
     </svg>
-    <div class="relative lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
+    <div class="relative lg:grid lg:grid-cols-3 lg:gap-x-12 xl:gap-x-16">
       <div class="lg:col-span-1">
         <h2 class="text-xl font-bold tracking-tight text-gray-700 sm:text-3xl">Upskill your career with free employment based aptitude tests.</h2>
         <p class="text-md font-normal text-gray-700 pt-4">These tests offer a convenient, detailed, and data-driven way to identify areas for improvement and boost your career advancement.</p>
         <p></p>
       </div>
-      <ul class="pt-8">
+      <ul class="pt-2">
         <li class="text-body-color mb-4 flex text-base">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8 pt-1">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -67,9 +142,9 @@
           </span>
           <p  class="font-normal text-md sm:text-lg pb-4"><span class="">Timed tests</span> help assess a candidate's ability to perform under pressure and complete tasks within a specified time frame.</p>
         </li>
-        <li class="text-body-color mb-4 flex text-base">
+        <li class="text-body-color mb-4 flex text-base pt-4">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8 pt-1">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -78,11 +153,14 @@
               ></path>
             </svg>
           </span>
-          <p class="font-normal text-md sm:text-lg pb-4">Detailed explanation for question provide a comprehensive understanding of the test results and areas for improvement to the user.</p>
+          <p class="font-normal text-md sm:text-lg pb-4">Detailed explanation for question provide a comprehensive understanding of the test results and areas for improvement</p>
         </li>
+        
+      </ul>
+      <ul class="pt-2">
         <li class="text-body-color mb-4 flex text-base">
           <span class="text-secondary mr-2 rounded-full text-base">
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8 pt-1">
               <path
                 d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
               ></path>
@@ -91,98 +169,106 @@
               ></path>
             </svg>
           </span>
-          <p  class="text-md sm:text-lg font-normal pb-4">Question bank of more than 50+ quality questions covers all the major topic and provide a great opportunity to upskill yourself</p>
+          <p  class="text-md sm:text-lg font-normal pb-4">Question bank of more than 100+ quality questions covers all the major topic and provide a great opportunity to upskill yourself</p>
+        </li>
+        <li class="text-body-color mb-4 flex text-base pt-4">
+          <span class="text-secondary mr-2 rounded-full text-base">
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-current text-blue-600 h-6 w-6 sm:h-8 sm:w-8 pt-1">
+              <path
+                d="M10 19.625C4.6875 19.625 0.40625 15.3125 0.40625 10C0.40625 4.6875 4.6875 0.40625 10 0.40625C15.3125 0.40625 19.625 4.6875 19.625 10C19.625 15.3125 15.3125 19.625 10 19.625ZM10 1.5C5.3125 1.5 1.5 5.3125 1.5 10C1.5 14.6875 5.3125 18.5312 10 18.5312C14.6875 18.5312 18.5312 14.6875 18.5312 10C18.5312 5.3125 14.6875 1.5 10 1.5Z"
+              ></path>
+              <path
+                d="M8.9375 12.1875C8.71875 12.1875 8.53125 12.125 8.34375 11.9687L6.28125 9.96875C6.0625 9.75 6.0625 9.40625 6.28125 9.1875C6.5 8.96875 6.84375 8.96875 7.0625 9.1875L8.9375 11.0312L12.9375 7.15625C13.1563 6.9375 13.5 6.9375 13.7188 7.15625C13.9375 7.375 13.9375 7.71875 13.7188 7.9375L9.5625 12C9.34375 12.125 9.125 12.1875 8.9375 12.1875Z"
+              ></path>
+            </svg>
+          </span>
+          <p class="font-normal text-md sm:text-lg pb-4">Create your own test based on difficulat, time, and number of questions. Automate your learning experience.</p>
         </li>
       </ul>
     </div>
   </div>
 </div>
   
-</div>
-
-{{!-- 1st section --}}
-
-{{!-- 
-<div id="what-is" class="relative w-full max-w-screen-xl px-6 sm:px-8 py-10 mx-auto text-lg sm:py-20">
-  <div class="grid gap-10 md:grid-cols-3">
-    <div class="flex flex-col col-span-2 justfify-center">
-      <ul class="pb-4 text-xl markdown">
-        <li>
-          <div class="markdown">
-            <h2 class="text-2xl sm:text-4xl font-semibold pb-8 text-gray-900">What is <strong class="text-blue-500 font-semibold">{{catData.title}}</strong> and what does it measure?</h2>
-            <p class="text-base md:text-lg leading-relaxed text-gray-900 tracking-wide font-normal">
-              {{certData.metadata.info1}}
-            </p><br>
-            <p class="text-base md:text-lg leading-relaxed text-gray-900 tracking-wide font-normal">
-              {{certData.metadata.info2}}
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="col-span-2 space-y-8 md:col-span-1 md:mt-6">
-      <div class="p-6 text-base bg-gray-50 rounded-sm shadow-md shadow-gray-400">
-        <h4 class="mb-4 text-lg font-medium text-gray-900">Jump to a section on this page:</h4>
-        <ol class="space-y-3 list-none list-inside">
-          <li class="text-gray-700 hover:text-gray-900">
-            <a href="#what-is" class="duration-150 ease-out hover:text-secondary">What is an {{catData.title}} and what does it measure?</a>
-          </li>
-          <li class="text-gray-700 hover:text-gray-900">
-            <a href="#why-should" class="duration-150 ease-out hover:text-secondary">Why should our free {{catData.title}}?</a>
-          </li>
-          <li class="text-gray-700 hover:text-gray-900">
-            <a href="#the-format" class="duration-150 ease-out hover:text-secondary">The format of our {{catData.title}}</a>
-          </li>
-          <li class="text-gray-700 hover:text-gray-900">
-            <a href="#score" class="duration-150 ease-out hover:text-secondary">{{catData.title}} score card</a>
-          </li>
-          <li class="text-gray-700 hover:text-gray-900">
-            <a href="#review" class="duration-150 ease-out hover:text-secondary">Satisfactory customer Reviews</a>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </div>
 </div> --}}
-
-
-{{!-- 1st section ends --}}
-
-{{!-- <div class="bg-white">
-  <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
-    <h2 class="text-lg font-medium text-gray-900">Comments</h2>
-    <div class="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10">
-      <div class="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8">
-        <div class="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
-
-          <div class="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-            <h3 class="text-sm font-medium text-gray-900">Can&#039;t say enough good things</h3>
-
-            <div class="mt-3 space-y-6 text-sm text-gray-500">
-              <p>I was really pleased with the overall shopping experience. My order even included a little personal, handwritten note, which delighted me!</p>
-              <p>The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
-          <p class="font-medium text-gray-900">Risako M</p>
-          <time datetime="2021-01-06" class="ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0">May 16, 2021</time>
-        </div>
-      </div>
-
-      <!-- More reviews... -->
-    </div>
-  </div>
-</div> --}}
-
-    <!-- More main page content here... -->
-
 
 
 <div class="bg-gray-50">
-  <div class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto pb-4 sm:pb-24" id="feature">
-    <div  id="why-should" class="-mx-6">
+  <div class="mx-auto max-w-7xl py-8 px-6 sm:py-24 lg:grid lg:grid-cols-3 lg:gap-x-12 lg:px-8">
+    <div>
+      <h2 class="text-lg font-semibold leading-8 tracking-tight text-blue-500">Everything you need</h2>
+      <p class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-800">All-in-one platform</p>
+      <p class="mt-6 text-base leading-7 text-gray-600">Our platform offers a large collection of employement aptitude tests with accurate and verified questions and answers of various companies.</p>
+    </div>
+    <div class="mt-20 lg:col-span-2 lg:mt-0">
+      <dl class="grid grid-cols-1 gap-12 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">Actual exam questions</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">All questions offer detailed step-by-step explanations and answers.</dd>
+        </div>
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">Test preparation platform</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">Try the questions before seeing the answer. Estimate your actual exam scores.</dd>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">Multiple practice sets</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">Multiple practice sets available to match your exam pattern.</dd>
+        </div>
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">Comprehensive coverage</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">Get comprehensive coverage on all topics, subtopics and categories of your subject.</dd>
+        </div>
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">Time tracking</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">Track your time spent on the test to maximize performance.</dd>
+        </div>
+        <div class="relative">
+          <dt>
+            <svg class="absolute mt-1 h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+            <p class="ml-10 text-lg font-semibold leading-8 text-gray-900">No hidden logins or captchas</p>
+          </dt>
+          <dd class="mt-2 ml-10 text-base leading-7 text-gray-600">Our platform provides a seamless user experience, without having to log in.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+{{!-- why use section --}}
+
+
+<div class="bg-white">
+  <div class="w-full max-w-screen-xl sm:px-8 py-8 sm:py-20 mx-auto pb-4 sm:pb-24" id="feature">
+    <div  id="why-should" class="">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
           <div class="relative mx-auto max-w-md sm:max-w-3xl sm:px-6 lg:px-0 order-2">
@@ -223,8 +309,8 @@
         </div>
         </div>
         <div class="relative flex justify-center px-4 lg:w-1/2">
-          <span class="z-40 w-full" style="max-width: 450px;">
-              <img class="" src="/images/whyusea.svg" alt="">
+          <span class="z-40 w-full" style="max-width: 480px;">
+              <img class="" src="/images/whyuse8.svg" alt="">
           </span>
         </div>
       </div>
@@ -238,11 +324,11 @@
 {{!-- Format section --}}
 
 
-<div class="bg-white">
-  <div id="the-format" class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto">
-    <div class="-mx-6">
+<div class="bg-gray-50">
+  <div id="the-format" class="w-full max-w-screen-xl px-2 sm:px-4 py-8 sm:py-14 mx-auto">
+    <div class="">
       <div class="items-center lg:flex">
-        <div class="lg:w-1/2 px-6">
+        <div class="lg:w-1/2 px-4">
           <h2 class="mt-2 pb-8 leading-none text-gray-900 text-2xl sm:text-4xl font-bold"><strong class="font-bold text-blue-500">Format</strong> of {{catData.title}}</h2>
           <p class="text-base md:text-lg leading-relaxed text-gray-900 tracking-wide font-normal">
             {{certData.metadata.format1}}
@@ -253,8 +339,8 @@
           </p>
         </div>
         <div class="relative flex justify-center px-4 lg:w-1/2">
-          <span class="z-40 w-full" style="max-width: 450px;">
-              <img class="" src="/images/formatd.svg" alt="">
+          <span class="z-40 w-full" style="max-width: 470px;">
+              <img class="" src="/images/whyuse7.svg" alt="">
           </span>
         </div>
       </div>
@@ -269,9 +355,9 @@
 
 
 
-<div class="bg-gray-50">
-  <div id="score" class="w-full max-w-screen-xl px-6 sm:px-8 py-8 sm:py-20 mx-auto">
-    <div class="-mx-6">
+<div class="bg-white">
+  <div id="score" class="w-full max-w-screen-xl px-1 sm:px-8 py-8 sm:py-20 mx-auto">
+    <div class="">
       <div class="items-center lg:flex">
         <div class="lg:w-1/2 px-6 order-2">
           <h3 class="mt-2 mb-8 text-2xl md:text-4xl font-bold leading-none text-gray-800">View sample <strong  class="font-bold text-blue-500">score card</strong></h3>
@@ -324,7 +410,7 @@
 {{!-- review --}}
 
 
-<section class="bg-white">
+<section class="bg-gray-50">
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:pt-24 lg:px-8" id="testimonial">
     <div id="review" class="mx-auto max-w-xl text-center">
       <h2 class="text-2xl font-bold tracking-tight sm:text-5xl">
@@ -608,7 +694,7 @@
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
                           {{!-- <option selected>Select Time</option> --}}
-                          <option class="bg-black hover:bg-gray-400" value="10">10 minutes</option>
+                          <option value="10">10 minutes</option>
                           <option value="20">20 minutes</option>
                           <option value="30" selected>30 minutes</option>
                           <option value="40">40 minutes</option>
