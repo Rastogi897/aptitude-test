@@ -53,9 +53,14 @@
 
 </div>
 
+
+
+
+
 <div class="flex w-full justify-center pb-6">
-  <button class="text-lg submit-btn px-4 py-2 rounded-md font-bold mt-6 bg-blue-500 text-white">Submit Test</button>
+  <button class="text-md submit-btn px-4 py-2 rounded-md font-semibold mt-6 bg-blue-500 text-white">Submit Test</button>
 </div>
+
 
 <div class="mt-6 w-full flex justify-center pb-4">
   <dl class="grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-4 px-4">
@@ -79,18 +84,62 @@
       <dd class="text-xl md:text-xl font-bold tracking-tight text-blue-500 ddata hidden"></dd>
     </div>
   </dl>
+  <br>
+</div>
+
+
+
+
+{{!-- download cert button --}}
+<div class="text-center">
+    <button id="modal-button" class="text-gray-900 bg-gray-100 rounded-md py-2 px-4 font-semibold border-2 border-gray-300 certButton hidden text-sm hover:border-gray-400 duration-150">Download Certificate</button>
 </div>
 
 <div class="border-b-2 pt-6 border-gray-200"></div>
+
+{{!-- certificate modal --}}
+
+<div  id="modal"  class="hidden bg-black/50 w-full fixed top-0 flex bottom-0 left-0 right-0 z-[999]">
+  <div class="flex flex-1 items-center justify-center">
+    {{!-- <div class="bg-gray-500 opacity-10 fixed w-full h-full top-0 left-0"></div> --}}
+    <div class="bg-gray-100 w-full max-w-[35%] rounded shadow-lg px-8 py-4 m-4">
+      <div class="text-right">
+        <button id="close-button" class="text-gray-500 cursor-pointer">x</button>
+      </div>
+      {{!-- <h1 class="text-2xl font-bold mb-4">Modal Title</h1> --}}
+      
+      <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900">Enter full name</label>
+      <div class="flex">
+        <input type="text" id="name" class="rounded-lg bg-white border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5" placeholder="Siddharth">
+      </div>
+
+      <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 pt-6">Enter Email</label>
+      <div class="mb-6">
+        <input type="text" id="email" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="sid02@gmail.com">
+      </div>
+      
+      <div class="flex justify-center">
+        <button class="bg-blue-500 text-white text-md py-2 px-4 rounded-full font-semibold" id="generate">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 {{!-- When I click on the Submit button above, the submitted answers in the test-data.hbs file is evaluated and appropriate javascript code is run to display correct answers / total answers --}}
 
 	<script>
     var q = {{{JSONstringify questions}}};
     var time_in_min = {{{JSONstringify time}}}
-    
+    let count = 0;
+    const qu  = document.querySelectorAll('.iquestion')
+    const tot = qu.length;
+
     // function to evaluate answers
     function evaluateAnswers() {
-      let count = 0;
+      
       let noans = 0;
 
       const questions  = document.querySelectorAll('.iquestion')
@@ -214,6 +263,103 @@
       clearInterval(interval);
       disableAll();
     });
+
+
+    function showmodal() {
+      const certButton = document.querySelector('.certButton');
+      certButton.classList.remove('hidden');
+    }
+    submitBtn.addEventListener('click', function() {
+      showmodal();
+    })
+
+
+    // certificate js
+
+    const modalButton = document.getElementById("modal-button");
+    const closeButton = document.getElementById("close-button");
+    const modal = document.getElementById("modal");
+
+    // Show the modal when the button is clicked
+    modalButton.addEventListener("click", function() {
+      modal.classList.remove("hidden");
+    });
+
+    // Hide the modal when the close button is clicked
+    closeButton.addEventListener("click", function() {
+      modal.classList.add("hidden");
+    });
+
+
+  // certificate creation
+
+  const generateBtn = document.getElementById('generate');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+
+  generateBtn.addEventListener("click", (event) => {
+      if (nameInput.value === "" || emailInput.value === "") {
+        event.preventDefault(); // prevent form submission
+        // display an error message or alert the user to fill in both fields
+      }
+      else{
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const canvas = document.createElement('canvas');
+      canvas.width = 1300;
+      canvas.height = 900;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 10;
+      ctx.strokeRect(5, 5, canvas.width - 10, canvas.height - 10);
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      ctx.font = 'Bold 64px Trebuchet MS';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillText(`🏅Certificate of Completion`, canvas.width / 2, canvas.height / 2 - 290);
+      ctx.font = 'Bold 30px Trebuchet MS';
+      ctx.fillText(`______________`, canvas.width / 2, canvas.height / 2 - 240);
+      //ctx.font = 'Bold 40px Trebuchet MS';
+      //ctx.fillStyle = 'black';
+      //ctx.fillText(`CERTIFICATE OF COMPLETION`, canvas.width / 2, canvas.height / 2 - 125);
+      //ctx.font = '25px Trebuchet MS';
+      //ctx.fillText(`on successful completion`, canvas.width / 2, canvas.height / 2 - 85);
+
+      ctx.fillStyle = 'black';
+      ctx.font = '26px Trebuchet MS';
+      ctx.fillText(`This certificate is awarded to`, canvas.width / 2, canvas.height / 2 - 125);
+      ctx.font = 'Italic 45px Trebuchet MS';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillText(`${name}`, canvas.width / 2, canvas.height / 2 -65);
+      ctx.font = '20px Trebuchet MS';
+      ctx.fillText(`${email}`, canvas.width / 2, canvas.height / 2 -25);
+      ctx.font = '26px Trebuchet MS';
+      ctx.fillStyle = 'Black';
+      ctx.fillText(`for successfully completing the {{certData.title}}`, canvas.width / 2, canvas.height / 2 + 25);
+      ctx.fillText(`with score of ${count} out of ${tot}`, canvas.width / 2, canvas.height / 2 + 70);
+
+      ctx.font = '45px Trebuchet MS';
+      ctx.fillText(`* * * * * * *`, canvas.width / 2, canvas.height / 2 + 225);
+      ctx.font = '22px Trebuchet MS';
+      ctx.fillStyle = 'Black';
+      ctx.fillText(`Certified by`, canvas.width / 2, canvas.height / 2 + 260);
+      ctx.font = 'Bold 30px Trebuchet MS';
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillText(`Employment Aptitude Test`, canvas.width / 2, canvas.height / 2 + 300);
+
+
+      const dataURL = canvas.toDataURL();
+      const link = document.createElement("a");
+      link.href = dataURL;
+      link.download = `certificate-${name}.png`;
+      link.click();
+      }
+  });
+
+
 
 	</script>
 {{/content}}
