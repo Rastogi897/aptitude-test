@@ -371,7 +371,7 @@ var categories = {
   "situational-judgement": {
     title: "Situational Judgement Test",
     logo: "Situational Judgement",
-    scorecard: "/images/NR_test.pdf",
+    scorecard: "/images/SJ_test.pdf",
     description:
       "Situational Judgement tests evaluate a candidate's decision-making skills in realistic and hypothetical scenarios.",
     commentsSlug: "situational-judgement",
@@ -404,7 +404,7 @@ var categories = {
   "data-interpretation": {
     title: "Data Interpretation Test",
     logo: "Data Interpretation",
-    scorecard: "/images/NR_test.pdf",
+    scorecard: "/images/DI_test.pdf",
     description:
       "Data interpretation test analyses the given information and interpret the given data according to the context and purpose.",
     commentsSlug: "data-interpretation",
@@ -437,7 +437,7 @@ var categories = {
   "english": {
     title: "English Test",
     logo: "English",
-    scorecard: "/images/NR_test.pdf",
+    scorecard: "/images/E_test.pdf",
     description:
       "The English test accesses an individual's knowledge and proficiency of the English language, including grammar.",
     commentsSlug: "english",
